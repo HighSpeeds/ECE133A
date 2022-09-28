@@ -1,0 +1,35 @@
+\include{"../preamble.tex"}
+\title{ECE 133A HW 1}
+\begin{document}
+\maketitle
+\section*{Exercise T2.4}
+$\phi$ could be linear, from the three points, we can create a plane (a linear function) that spans all three points. However I could also create a concave or convex function that would also pass through all three points.
+\section*{Exercise T2.8}
+\subsection*{(a)}
+\begin{align*}
+\int p(x)dx&=\sum_{i=1}^{n}c_i\frac{1}{i}x^{i}\\
+\int_{\alpha}^\beta&=\sum_{i=1}^{n}c_i\frac{1}{i}(\beta^i-\alpha^i)
+\end{align*}
+therefore we have
+$$a=\boxed{\left(c_1(\beta-\alpha)),...,\frac{c_n}{n}(\beta^n-\alpha^n)\right)}$$
+\subsection*{(b)}
+we have
+$$p'(\alpha)=\sum_{i=1}^{n}(i-1)c_i \alpha^{i-2}$$
+thus we get
+$$b=\boxed{\left(0,c_2,...,(n-1)\alpha^{n-2}\right)}$$
+\section*{Exercise A1.2}
+let $u=(\sqrt{x_1},...,\sqrt{x_n})$ and $v=\left(\sqrt{\frac{1}{x_1}},...,\sqrt{\frac{1}{x_n}}\right)$, from Cauchy-Schwarz we have
+$$<u,v>^2\leq<u,u><v,v>$$
+$$n^2\leq\left(\sum_{k=1}^{n}x_n\right)\left(\sum_{k=1}^{n}\frac{1}{x_k}\right)$$
+$$\frac{1}{n}\sum_{k=1}^{n}x_k=n\left(\sum_{k=1}^n\frac{1}{x_k}\right)^{-1}$$
+$$\frac{1}{n}\sum_{k=1}^{n}x_k=\left(\frac{1}{n}\sum_{k=1}^n\frac{1}{x_k}\right)^{-1}$$
+\section*{Exercise T3.25}
+\subsection*{(a)}
+\begin{align*}
+	E[p]&=\boxed{\theta\mu+(1-\theta)\mu^{\text{rf}}\textbf{1}}
+\end{align*}
+\begin{align*}
+	Var(p)&=\theta^2\sigma^2\\
+	\sqrt{Var(p)}&=\boxed{|\theta|\sigma}
+\end{align*}
+\end{document}

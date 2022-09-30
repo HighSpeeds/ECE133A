@@ -3,7 +3,8 @@
 \begin{document}
 \maketitle
 \section*{Exercise T2.4}
-$\phi$ could be linear, from the three points, we can create a plane (a linear function) that spans all three points. However I could also create a concave or convex function that would also pass through all three points.
+$\phi$ is not linear, since point 2 is equal to the negative of point 3, but the output of the function
+at point 2 is not the negative of the output at point 3.
 \section*{Exercise T2.8}
 \subsection*{(a)}
 \begin{align*}
@@ -11,18 +12,21 @@ $\phi$ could be linear, from the three points, we can create a plane (a linear f
 \int_{\alpha}^\beta&=\sum_{i=1}^{n}c_i\frac{1}{i}(\beta^i-\alpha^i)
 \end{align*}
 therefore we have
-$$a=\boxed{\left(c_1(\beta-\alpha)),...,\frac{c_n}{n}(\beta^n-\alpha^n)\right)}$$
+$$a=\boxed{\left((\beta-\alpha)),...,\frac{1}{n}(\beta^n-\alpha^n)\right)}$$
 \subsection*{(b)}
 we have
 $$p'(\alpha)=\sum_{i=1}^{n}(i-1)c_i \alpha^{i-2}$$
 thus we get
-$$b=\boxed{\left(0,c_2,...,(n-1)\alpha^{n-2}\right)}$$
+$$b=\boxed{\left(0,1,...,(n-1)\alpha^{n-2}\right)}$$
 \section*{Exercise A1.2}
 let $u=(\sqrt{x_1},...,\sqrt{x_n})$ and $v=\left(\sqrt{\frac{1}{x_1}},...,\sqrt{\frac{1}{x_n}}\right)$, from Cauchy-Schwarz we have
-$$<u,v>^2\leq<u,u><v,v>$$
-$$n^2\leq\left(\sum_{k=1}^{n}x_n\right)\left(\sum_{k=1}^{n}\frac{1}{x_k}\right)$$
-$$\frac{1}{n}\sum_{k=1}^{n}x_k=n\left(\sum_{k=1}^n\frac{1}{x_k}\right)^{-1}$$
-$$\frac{1}{n}\sum_{k=1}^{n}x_k=\left(\frac{1}{n}\sum_{k=1}^n\frac{1}{x_k}\right)^{-1}$$
+\begin{align*}
+	\|u^Tv\|&\leq \|u\|\|v\|\\
+	\|u^Tv\|^2&\leq \|u\|^2\|v\|^2\\
+	n^2&\leq\left(\sum_{k=1}^{n}x_n\right)\left(\sum_{k=1}^{n}\frac{1}{x_k}\right)\\
+	\frac{1}{n}\sum_{k=1}^{n}x_k&\geq n\left(\sum_{k=1}^n\frac{1}{x_k}\right)^{-1}\\
+	\frac{1}{n}\sum_{k=1}^{n}x_k&\geq\left(\frac{1}{n}\sum_{k=1}^n\frac{1}{x_k}\right)^{-1}\\
+\end{align*}
 \section*{Exercise T3.25}
 \subsection*{(a)}
 \begin{align*}
@@ -32,4 +36,19 @@ $$\frac{1}{n}\sum_{k=1}^{n}x_k=\left(\frac{1}{n}\sum_{k=1}^n\frac{1}{x_k}\right)
 	Var(p)&=\theta^2\sigma^2\\
 	\sqrt{Var(p)}&=\boxed{|\theta|\sigma}
 \end{align*}
+\subsection*{(b)}
+Therefore we have that 
+$$\theta_{optimal}=\pm \frac{\sigma^{\text{tar}}}{\sigma}$$
+Therefore if our risky asset has a possitive rate of return, we will pick
+$$\theta_{optimal}=\boxed{\frac{\sigma^{\text{tar}}}{\sigma}}$$
+And if our risky asset has a negative rate of return we will choose
+$$\theta_{optimal}=\boxed{-\frac{\sigma^{\text{tar}}}{\sigma}}$$
+\subsection*{(c)}
+If we want our portfolio to have a lower risk level than the asset, ie $\sigma^{\text{tar}}<\sigma$,
+but if the expected return rate of the asset is still positive, then we will hedge,
+since $\theta_{optimal}=\frac{\sigma^{\text{tar}}}{\sigma}<1$.\\\\
+If we are comfortable with a greater level of risk than the asset, ie $\sigma^{\text{tar}}>\sigma$, and
+if the expected return rate of the asset is still positive, we will Leverage
+since $\theta_{optimal}=\frac{\sigma^{\text{tar}}}{\sigma}>1$.\\\\
+And, if the expected return rate of the asset is negative, we will short the asset.
 \end{document}

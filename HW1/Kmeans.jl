@@ -99,8 +99,8 @@ function main()
 	    subplot(5,4,i)
 	    imshow(reshape(centroids[i,:,:],(28,28)))
     end
-savefig("digits.png")
-close(fig)
+    savefig("digits.png")
+    close(fig)
 end
 
 main()

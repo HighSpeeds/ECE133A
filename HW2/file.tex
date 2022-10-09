@@ -1,0 +1,18 @@
+\include{"../preamble.tex"}
+\title{ECE 133A HW 1}
+\begin{document}
+\maketitle
+\section*{Exercise A1.7}
+For the optimal coefficents we have:
+\begin{align*}
+    J&=\frac{1}{n}||c_1\textbf{1}+c_2a-b||^2\\
+    &=\frac{1}{n}||(m_b-m_ac_2)\textbf{1}+c_2a-b||^2\\
+    &=\frac{1}{n}\sum_{k=1}^n((m_b-m_ac_2)+c_2a_k-b_k)^2\\
+    &=\frac{1}{n}\sum_{k=1}^n(c_2(a_k-m_a)-(b_k-m_b))^2\\
+    &=\frac{1}{n}\left(c_2^2\sum_{k=1}^n(a_k-m_a)^2-c_2\sum_{k=1}^n(a_k-m_a)(b_k-m_b) +\sum_{k=1}^n(b_k-m_b)^2\right)\\
+    &=c_2^2s_a^2-\frac{2c_2}{n}(a-m_a\textbf{1})^T(b-m_b\textbf{1})+s_b^2\\
+    &=\rho^2s_b^2-2\frac{\rho s_b}{s_a}\rho s_a s_b+s_b^2\\
+    &=s_b^2-\rho^2 s_b^2\\
+    &=\boxed{(1-\rho^2)s_b^2}
+\end{align*}
+\end{document}

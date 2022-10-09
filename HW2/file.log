@@ -1,0 +1,319 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.25)  8 OCT 2022 21:57
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/Lawrence/Desktop/UCLA/ECE133A/HW2/file.tex
+(c:/Users/Lawrence/Desktop/UCLA/ECE133A/HW2/file.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-30>
+
+LaTeX Warning: \include should only be used after \begin{document} on input line 1.
+
+(../preamble.tex (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(c:/texlive/2022/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (c:/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+ (c:/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (c:/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\caption@tempdima=\dimen139
+\captionmargin=\dimen140
+\caption@leftmargin=\dimen141
+\caption@rightmargin=\dimen142
+\caption@width=\dimen143
+\caption@indent=\dimen144
+\caption@parindent=\dimen145
+\caption@hangindent=\dimen146
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count193
+\c@continuedfloat=\count194
+)
+\c@subfigure=\count195
+\c@subtable=\count196
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen147
+\stockheight=\dimen148
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen151
+)) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen152
+) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count197
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count198
+\leftroot@=\count199
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count266
+\DOTSCASE@=\count267
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen153
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count268
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count269
+\dotsspace@=\muskip16
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
+\tag@help=\toks18
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
+\andhelp@=\toks19
+\eqnshift@=\dimen154
+\alignsep@=\dimen155
+\tagshift@=\dimen156
+\tagwidth@=\dimen157
+\totwidth@=\dimen158
+\lineht@=\dimen159
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/texlive/2022/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/05/22 v0.5v Insert pages of external PDF documents (AM)
+ (c:/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (c:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count275
+\calc@Bcount=\count276
+\calc@Adimen=\dimen160
+\calc@Bdimen=\dimen161
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count277
+\calc@Cskip=\skip54
+) (c:/texlive/2022/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen162
+\ESO@tempdimb=\dimen163
+ (c:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+))
+\AM@pagewidth=\dimen164
+\AM@pageheight=\dimen165
+\AM@fboxrule=\dimen166
+ (c:/texlive/2022/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2022/05/22 v0.5v Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count278
+\AM@pagebox=\box53
+\AM@global@opts=\toks22
+\AM@pagecnt=\count279
+\AM@toc@title=\toks23
+\c@AM@survey=\count280
+\AM@templatesizebox=\box54
+) (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count281
+\lst@gtempboxa=\box55
+\lst@token=\toks24
+\lst@length=\count282
+\lst@currlwidth=\dimen167
+\lst@column=\count283
+\lst@pos=\count284
+\lst@lostspace=\dimen168
+\lst@width=\dimen169
+\lst@newlines=\count285
+\lst@lineno=\count286
+\lst@maxwidth=\dimen170
+ (c:/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count287
+\lst@skipnumbers=\count288
+\lst@framebox=\box56
+) (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/texlive/2022/texmf-dist/tex/latex/bera/beramono.sty
+Package: beramono 2004/01/31 (WaS)
+)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count289
+\l__pdf_internal_box=\box57
+) (./file.aux)
+\openout1 = `file.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count290
+\scratchdimen=\dimen171
+\scratchbox=\box58
+\nofMPsegments=\count291
+\nofMParguments=\count292
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count293
+\MPscratchDim=\dimen172
+\MPnumerator=\count294
+\makeMPintoPDFobject=\count295
+\everyMPtoPDFconversion=\toks26
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (c:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (c:/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (c:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (c:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (c:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (c:/texlive/2022/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+\c@lstlisting=\count296
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./file.aux) ) 
+Here is how much of TeX's memory you used:
+ 7573 strings out of 475075
+ 120543 string characters out of 5783001
+ 454671 words of memory out of 5000000
+ 28868 multiletter control sequences out of 15000+600000
+ 484215 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 74i,13n,82p,371b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on file.pdf (1 page, 107484 bytes).
+PDF statistics:
+ 64 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

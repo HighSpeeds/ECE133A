@@ -30,18 +30,22 @@ let $u=(\sqrt{x_1},...,\sqrt{x_n})$ and $v=\left(\sqrt{\frac{1}{x_1}},...,\sqrt{
 \section*{Exercise T3.25}
 \subsection*{(a)}
 \begin{align*}
-	E[p]&=\boxed{\theta\mu+(1-\theta)\mu^{\text{rf}}\textbf{1}}
+	E[p]&=\theta\text{avg}(r)+(1-\theta)\text{avg}(\mu^{\text{rf}}\textbf{1})\\
+	E[p]&=\boxed{\theta\mu+(1-\theta)\mu^{\text{rf}}}
 \end{align*}
 \begin{align*}
-	Var(p)&=\theta^2\sigma^2\\
+	\text{std}(p)&=\sqrt{\frac{(p_1-E[p])^2+...+(p_T-E[p])^2}{T}}\\
+	\text{std}(p)&=\sqrt{\theta^2(\text{std}(r))}\\
 	\sqrt{Var(p)}&=\boxed{|\theta|\sigma}
 \end{align*}
 \subsection*{(b)}
 Therefore we have that 
 $$\theta_{optimal}=\pm \frac{\sigma^{\text{tar}}}{\sigma}$$
-Therefore if our risky asset has a possitive rate of return, we will pick
+Therefore if our risky asset has a rate of return greater than the risk free asset
+ie: $\mu>\mu^{rf}$, we will pick
 $$\theta_{optimal}=\boxed{\frac{\sigma^{\text{tar}}}{\sigma}}$$
-And if our risky asset has a negative rate of return we will choose
+And if our risky asset has a rate of return less than the risk free asset, 
+ie: $\mu<\mu^{rf}$ we will choose
 $$\theta_{optimal}=\boxed{-\frac{\sigma^{\text{tar}}}{\sigma}}$$
 \subsection*{(c)}
 If we want our portfolio to have a lower risk level than the asset, ie $\sigma^{\text{tar}}<\sigma$,

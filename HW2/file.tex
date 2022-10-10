@@ -48,5 +48,8 @@ Since $A^k_{i,j}$ represents whether a path of length exists from $j$ to $i$, (w
 we can see that the sum of the $A^k$ matrices for $1\leq k \leq n-1$ represents all the paths that can possibly exists. Therefore $A$ is
 irreducible if it possible to travel to one node to any other node, ie that $G_A$ is strongly connected.
 \section*{Exercise A2.8}
-We can start by multiplying each 
+We can start by multiplying each $x_i$ subvectors with $B$, each of these operations takes $(2n-1)n$ flops, so for the $n$ subvectors it will cost us $(2n-1)n^2$ flops.
+\\\\Now we get that for the ith output subvector $y_i=\sum_{j=1}^{n}A_{i,j}Bx_j$. Multiplying $A{i,j}$ with $Bx_j$ costs us $n$ flops, therefore repeating this $n$ times for 
+$1\leq i \leq n$ results in $n^2$ flops. Summing these vectors $A_{i,j}Bx_j$ costs $n(n-1)$ flops. So in total computing this subvector costs us $2n(n-1)$ flops. We will need to repeat this for each of the $n$ output subvectors, so it will cost use $2n^2(n-1)$.\\\\
+Therefore in total, this algorithm will cost us $2n^2(n-1)+(2n-1)n^2$ flops, so approximatley $4n^3$ flops for large $n$. Compared with $(2n^2-1)n^2$, or $2n^4$ approximatley for large $n$.
 \end{document}

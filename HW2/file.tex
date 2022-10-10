@@ -15,4 +15,38 @@ For the optimal coefficents we have:
     &=s_b^2-\rho^2 s_b^2\\
     &=\boxed{(1-\rho^2)s_b^2}
 \end{align*}
+\section*{Exercise A1.8}
+\subsection*{(a)}
+We want to maximize $J$ with respect to $c_1$, so we take the derivative of J with respect to $c_1$ and find
+the value of $c_1$ that makes the derivative equal to zero:
+\begin{align*}
+\frac{\partial J}{\partial c_1}=\frac{2}{n}\sum_{k=1}^n\frac{c_1+c_2a_k-b_k}{1+c^2}&=0\\ 
+\frac{1}{n}\sum_{k=1}^n(c_1+c_2a_k-b_k)&=0\\
+c_1+\frac{1}{n}\sum_{k=1}^n(c_2a_k-b_k)&=0\\
+c_1+c_2m_a-m_b&=0\\
+c_1&=m_b-c_2m_a
+\end{align*}
+\subsection*{(b)}
+We have for the optimal $c_1$, 
+\begin{align*}
+    J&=\frac{||c_2(a-m_a\textbf{1})-(b-m_b\textbf{1})||^2}{n(1+c_2^2)}\\
+    &=\frac{1}{n(1+c_2^2)}\left(\sum_{k=1}^n(c_2a_k-m_ac_2-b_k+m_b)^2\right)\\
+    &=\frac{1}{(1+c_2^2)}\left(c_2^2s_a^2+s_b^2-2\rho s_a s_b c_2\right)
+\end{align*}
+Taking the derivative with respect to $c_2$ and setting it equal to zero gives us that the optimal value of 
+$c_2$ must satisfy:
+$$\rho c_2^2+\left(\frac{s_a}{s_b}-\frac{s_b}{s_a}\right)=0$$
+When $\rho\neq0$ the optimal solution is one with the same sign as 
+$\rho$, since that makes $-2\rho s_a s_b c_2$ negative.
+\subsection*{(c)}
+TODO
+\section*{Exercise A2.4}
+Expanding $(1+A)^{n-1}$, we get
+$$
+(1+A)^{n-1}=\sum_{k=1}^{n-1}A^k$$
+Since $A^k_{i,j}$ represents whether a path of length exists from $j$ to $i$, (with $A^k_{i,j}>0$ representing that such a path exitst)
+we can see that the sum of the $A^k$ matrices for $1\leq k \leq n-1$ represents all the paths that can possibly exists. Therefore $A$ is
+irreducible if it possible to travel to one node to any other node, ie that $G_A$ is strongly connected.
+\section*{Exercise A2.8}
+We can start by multiplying each 
 \end{document}

@@ -52,4 +52,41 @@ We can start by multiplying each $x_i$ subvectors with $B$, each of these operat
 \\\\Now we get that for the ith output subvector $y_i=\sum_{j=1}^{n}A_{i,j}Bx_j$. Multiplying $A{i,j}$ with $Bx_j$ costs us $n$ flops, therefore repeating this $n$ times for 
 $1\leq i \leq n$ results in $n^2$ flops. Summing these vectors $A_{i,j}Bx_j$ costs $n(n-1)$ flops. So in total computing this subvector costs us $2n(n-1)$ flops. We will need to repeat this for each of the $n$ output subvectors, so it will cost use $2n^2(n-1)$.\\\\
 Therefore in total, this algorithm will cost us $2n^2(n-1)+(2n-1)n^2$ flops, so approximatley $4n^3$ flops for large $n$. Compared with $(2n^2-1)n^2$, or $2n^4$ approximatley for large $n$.
+\section*{Exercise A2.10}
+\subsection*{(a)}
+For any $k$ that satisfy $i\leq k < j$, we have that we can rearange the multiplication of $A_iA_{i+1}...A_{j}$ to $(A_i..A_k)(A_{k+1}..A_j)$.\\\\
+We have that multiplying the matrices from $i$ to $k$ will cost us $c_{i,k}$ flops and result in a
+matrix of size $(n_{i-1},n_k)$, likewise multiplying the matrices from $k+1$ to $j$ will cost us $c_{k+1,j}$ flops and result in a matrix of size $(n_{k},n_j)$.\\\\
+Multiplying these two matrices together will cost us $2n_{i-1}n_kn_j$. Therefore if we split up the computation of 
+$A_iA_{i+1}...A_{j}$ into two parts, one from $i$ to $k$ the other from $k+1$ to $j$, we will have that the total cost of computing $A_iA_{i+1}...A_{j}$ is:
+$$c_{i,k}+c_{k+1,j}+2n_{i-1}n_kn_j$$
+Therefore the minimum of the cost of computing $A_iA_{i+1}...A_{j}$ is when $k$ is the value that minimizes the above expression. In otherwords:
+$$c_{i,j}=\min_{k=i,i+1,...,j-1}(c_{i,k}+c_{k+1,j}+2n_{i-1}n_kn_j)$$
+\subsection*{(b)}
+We have that the triangular table of $c_ij$ for $A_1A_2A_3A_4$ is:
+$$\begin{matrix}
+    0&1.00\cdot 10^{10}&1.20\cdot 10^{10}&1.21\cdot 10^{9}&\\
+    & 0&1.00\cdot 10^{11}&1.20\cdot 10^{9}&\\
+    & & 0&2.00\cdot 10^{8}&\\
+    & & & 0&\\
+    \end{matrix}$$
+Therefore the optimal cost of computing $A_1A_2A_3A_4$ 
+is multiply $A_1$ with the product of $A_2$ multiplied with the product of $A_3$ and $A_4$, 
+which takes us $\boxed{1.21\cdot 10^9}$ flops.
+\\\\
+Likewise since the triangular table of $c_ij$ for $A_1A_2A_3$ is:
+$$\begin{matrix}
+    0&1.00\cdot 10^{10}&1.20\cdot 10^{10}&\\
+    & 0&1.00\cdot 10^{11}&\\
+    & & 0&\\
+    \end{matrix}$$
+The optimal cost of $A_1A_2A_3$ is to multiply $(A_1A_2)$ with $A_3$, 
+which takes us $1.20\cdot 10^{10}$ flops. So interestingly the optimal flops
+to compute $A_1A_2A_3A_4$ less than the optimal flops to compute $A_1A_2A_3$, 
+despite the fact that $A_1A_2A_3A_4$ involves one more matrix multiplication. Likewise the
+optimal order for the multiplication also changes when we try to compute $A_1A_2A_3A_4$ compared to $A_1A_2A_3$.
+
 \end{document}
+
+
+

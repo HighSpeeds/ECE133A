@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.9.26)  12 OCT 2022 01:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.9.26)  12 OCT 2022 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,38 +337,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <test.png, id=26, 462.528pt x 346.896pt>
 File: test.png Graphic file (type png)
 <use test.png>
-Package pdftex.def Info: test.png  used on input line 45.
+Package pdftex.def Info: test.png  used on input line 54.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--58
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--58
-
- []
-
-[4 <./test.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 60--65
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 75--81
+[5 <./test.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
  []
 
-[6] (./file.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 84--90
+
+ []
+
+[7] (./file.aux) ) 
 Here is how much of TeX's memory you used:
  7799 strings out of 478238
  121231 string characters out of 5850456
- 449800 words of memory out of 5000000
+ 440800 words of memory out of 5000000
  25930 multiletter control sequences out of 15000+600000
  485330 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -387,10 +387,10 @@ public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm2074.pfb>
-Output written on file.pdf (6 pages, 198422 bytes).
+Output written on file.pdf (7 pages, 196244 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

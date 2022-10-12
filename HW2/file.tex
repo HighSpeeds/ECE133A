@@ -33,11 +33,20 @@ We have for the optimal $c_1$,
     &=\frac{1}{n(1+c_2^2)}\left(\sum_{k=1}^n(c_2a_k-m_ac_2-b_k+m_b)^2\right)\\
     &=\frac{1}{(1+c_2^2)}\left(c_2^2s_a^2+s_b^2-2\rho s_a s_b c_2\right)
 \end{align*}
-Taking the derivative with respect to $c_2$ and setting it equal to zero gives us that the optimal value of 
-$c_2$ must satisfy:
-$$\rho c_2^2+\left(\frac{s_a}{s_b}-\frac{s_b}{s_a}\right)=0$$
+Taking the derivative with respect to $c_2$, we get
+
+\begin{align*}
+	\frac{\partial J}{\partial c_2}&=\frac{1}{(1+c_2^2)^2}\left((2c_2s_a^2-2\rho s_a s_b)(1+c_2^2)-2c_2(c_2^2s_a^2+s_b^2-2\rho s_a s_b c_2)\right)\\
+\end{align*}
+Setting this equal to 0 to mimimize $J$ with respect to $c_2$ we get
+\begin{align*}
+	\frac{1}{(1+c_2^2)^2}\left((2c_2s_a^2-2\rho s_a s_b)(1+c_2^2)-2c_2(c_2^2s_a^2+s_b^2-2\rho s_a s_b c_2)\right)&=0\\
+	2c_2s_a^2-2\rho s_a s_b -2\rho s_a s_b c_2^2-2c_2s_b^2+4\rho s_as_b c_2^2&=0\\
+	\rho s_as_bc_2^2+2c_2(s_a^2-s_b^2)-2\rho s_a s_b &=0\\
+	\rho c_2^2+\left(\frac{s_a}{s_b}-\frac{s_b}{s_a}\right)c_2-\rho &=0
+\end{align*}
 When $\rho\neq0$ the optimal solution is one with the same sign as 
-$\rho$, since that makes $-2\rho s_a s_b c_2$ negative.
+$\rho$, since that makes $-2\rho s_a s_b c_2$ negative, which will minimize $J$, since all the other terms of $J$ involves squares, which are always nonnegative
 \subsection*{(c)}
 With the following code in Julia 
 \lstinputlisting[basicstyle=\tiny]{regression.jl}
@@ -54,7 +63,7 @@ irreducible if it possible to travel to one node to any other node, ie that $G_A
 We can start by multiplying each $x_i$ subvectors with $B$, each of these operations takes $(2n-1)n$ flops, so for the $n$ subvectors it will cost us $(2n-1)n^2$ flops.
 \\\\Now we get that for the ith output subvector $y_i=\sum_{j=1}^{n}A_{i,j}Bx_j$. Multiplying $A{i,j}$ with $Bx_j$ costs us $n$ flops, therefore repeating this $n$ times for 
 $1\leq i \leq n$ results in $n^2$ flops. Summing these vectors $A_{i,j}Bx_j$ costs $n(n-1)$ flops. So in total computing this subvector costs us $2n(n-1)$ flops. We will need to repeat this for each of the $n$ output subvectors, so it will cost use $2n^2(n-1)$.\\\\
-Therefore in total, this algorithm will cost us $2n^2(n-1)+(2n-1)n^2$ flops, so approximatley $4n^3$ flops for large $n$. Compared with $(2n^2-1)n^2$, or $2n^4$ approximatley for large $n$.
+Therefore in total, this algorithm will cost us $2n^2(n-1)+(2n-1)n^2$ flops, so approximatley $4n^3$ flops for large $n$. In comparison the algorithm for computing $(n^2,n^2)$ matrix multiplied with an $n^2$ vector will take $(2n^2-1)n^2$ flops, or $2n^4$ flops approximatley for large $n$.
 \section*{Exercise A2.10}
 \subsection*{(a)}
 For any $k$ that satisfy $i\leq k < j$, we have that we can rearange the multiplication of $A_iA_{i+1}...A_{j}$ to $(A_i..A_k)(A_{k+1}..A_j)$.\\\\
@@ -66,7 +75,7 @@ $$c_{i,k}+c_{k+1,j}+2n_{i-1}n_kn_j$$
 Therefore the minimum of the cost of computing $A_iA_{i+1}...A_{j}$ is when $k$ is the value that minimizes the above expression. In otherwords:
 $$c_{i,j}=\min_{k=i,i+1,...,j-1}(c_{i,k}+c_{k+1,j}+2n_{i-1}n_kn_j)$$
 \subsection*{(b)}
-We have that the triangular table of $c_ij$ for $A_1A_2A_3A_4$ is:
+We have that the triangular table of $c_{i,j}$ for $A_1A_2A_3A_4$ is:
 $$\begin{matrix}
     0&1.00\cdot 10^{10}&1.20\cdot 10^{10}&1.21\cdot 10^{9}&\\
     & 0&1.00\cdot 10^{11}&1.20\cdot 10^{9}&\\
@@ -77,7 +86,7 @@ Therefore the optimal cost of computing $A_1A_2A_3A_4$
 is multiply $A_1$ with the product of $A_2$ multiplied with the product of $A_3$ and $A_4$, 
 which takes us $\boxed{1.21\cdot 10^9}$ flops.
 \\\\
-Likewise since the triangular table of $c_ij$ for $A_1A_2A_3$ is:
+Likewise since the triangular table of $c_{i,j}$ for $A_1A_2A_3$ is:
 $$\begin{matrix}
     0&1.00\cdot 10^{10}&1.20\cdot 10^{10}&\\
     & 0&1.00\cdot 10^{11}&\\

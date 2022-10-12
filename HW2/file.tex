@@ -39,7 +39,10 @@ $$\rho c_2^2+\left(\frac{s_a}{s_b}-\frac{s_b}{s_a}\right)=0$$
 When $\rho\neq0$ the optimal solution is one with the same sign as 
 $\rho$, since that makes $-2\rho s_a s_b c_2$ negative.
 \subsection*{(c)}
-TODO
+With the following code in Julia 
+\lstinputlisting[basicstyle=\tiny]{regression.jl}
+We get the following regression:\\
+\includegraphics[scale=0.5]{test.png}
 \section*{Exercise A2.4}
 Expanding $(1+A)^{n-1}$, we get
 $$
@@ -58,7 +61,7 @@ For any $k$ that satisfy $i\leq k < j$, we have that we can rearange the multipl
 We have that multiplying the matrices from $i$ to $k$ will cost us $c_{i,k}$ flops and result in a
 matrix of size $(n_{i-1},n_k)$, likewise multiplying the matrices from $k+1$ to $j$ will cost us $c_{k+1,j}$ flops and result in a matrix of size $(n_{k},n_j)$.\\\\
 Multiplying these two matrices together will cost us $2n_{i-1}n_kn_j$. Therefore if we split up the computation of 
-$A_iA_{i+1}...A_{j}$ into two parts, one from $i$ to $k$ the other from $k+1$ to $j$, we will have that the total cost of computing $A_iA_{i+1}...A_{j}$ is:
+$A_iA_{i+1}...A_{j}$ into two parts, one from $i$ to $k$ the other from $k+1$ to $j$, we will have thatv the total cost of computing $A_iA_{i+1}...A_{j}$ is:
 $$c_{i,k}+c_{k+1,j}+2n_{i-1}n_kn_j$$
 Therefore the minimum of the cost of computing $A_iA_{i+1}...A_{j}$ is when $k$ is the value that minimizes the above expression. In otherwords:
 $$c_{i,j}=\min_{k=i,i+1,...,j-1}(c_{i,k}+c_{k+1,j}+2n_{i-1}n_kn_j)$$

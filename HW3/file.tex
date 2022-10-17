@@ -37,4 +37,23 @@ with the following code:
 ]{Problem1.jl}
 We get that
 $$\theta=\boxed{(-6.117, 6.99, -1.322, -0.709, 0.158)}$$
+\section*{Exercise T8.10}
+Squaring these, we get that for $1\leq i\leq 4$:
+\begin{align*}
+	\rho_i^2&=||x-a_i||^2\\
+	&=(x_1-a_{i1})^2+(x_2-a_{i2})^2+(x_3-a_{i3})^2
+\end{align*}
+Subtracting $\rho_4^2$ from the others, we get that for $1\leq i \leq 3$ 
+\begin{align*}
+	\rho_i^2-\rho_4^2=&
+	(2a_{41}-2a_{i1})x_1+a_{i1}^2-a_{41}^2\\
+	&+(2a_{42}-2a_{i2})x_2+a_{i2}^2-a_{42}^2\\
+	&+(2a_{43}-2a_{i3})x_3+a_{i3}^2-a_{43}^2
+\end{align*}
+Therefore for the values of $\rho_i$ and $a_i$ we get that:
+$$x=(0.605, 0.405, -0.503)$$
+Which can be found with the following code in Julia
+\lstinputlisting[
+    basicstyle=\tiny, %or \small or \footnotesize etc.
+]{Problem2.jl}
 \end{document}

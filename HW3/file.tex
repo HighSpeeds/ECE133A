@@ -81,4 +81,23 @@ $$\begin{matrix}
     c_{21}&=8.0&c_{22}&=-3.25&c_{23}&=1.75\\
     c_{31}&=-5.0&c_{32}&=4.75&c_{33}&=-2.25
 \end{matrix}$$
+
+\subsection*{Exercise A4.12}
+\subsection*{(a)}
+When $a=1$, because this would make the columns not linearly independent.
+\subsection*{(b)}
+We will have that 
+$$A^{-1}=\begin{bmatrix}
+    c_1 & 0 & \cdots & 0 & c_2\\
+    0 & c_1 & \cdots & 0 & c_2\\
+    \vdots & \vdots & \ddots & \vdots & \vdots\\
+    0 & c_2 & \cdots & c_1 & 0\\
+    c_2 & 0 & \cdots & 0 & c_1
+\end{bmatrix}$$
+Therefore we must have that 
+$$c_1+\alpha c_2=1$$
+$$c_2+\alpha c_1=0$$
+thus we get that $c_2=-\alpha c_1$ and thus
+$$c_1=\frac{1}{1-\alpha^2}$$
+$$c_2=-\frac{\alpha}{1-\alpha^2}$$
 \end{document}

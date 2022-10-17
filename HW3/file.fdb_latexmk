@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1666017601 "/home/lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" "file.pdf" "file" 1666017602
+["pdflatex"] 1666020811 "/home/lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" "file.pdf" "file" 1666020811
   "../preamble.tex" 1664665325 575 5791e705ff366eb94d680dff3f2fe48a ""
-  "/home/lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" 1666017601 2679 1e3452acb2e048ab048891c0652eb04e ""
+  "/home/lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" 1666020810 3237 324bc0a30fdad83a3ab64e15f8d1c493 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1650183167 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -94,8 +94,8 @@
   "Problem1.jl" 1666006552 158 ddf7594feaf404c6e4e6323497b4b993 ""
   "Problem2.jl" 1666016020 386 9821e7fad72ac71a969f5788ef0eb01e ""
   "Problem3.jl" 1666017487 218 fea264fadfc21e22281bdf679c7004fd ""
-  "file.aux" 1666017602 293 0dc78877b1976c2e8e9822e6999f2485 "pdflatex"
-  "file.tex" 1666017601 2679 1e3452acb2e048ab048891c0652eb04e ""
+  "file.aux" 1666020811 293 511f749cc5690e86dca0ec9b14403c17 "pdflatex"
+  "file.tex" 1666020810 3237 324bc0a30fdad83a3ab64e15f8d1c493 ""
   (generated)
   "file.aux"
   "file.log"

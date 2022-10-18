@@ -81,8 +81,22 @@ $$\begin{matrix}
     c_{21}&=8.0&c_{22}&=-3.25&c_{23}&=1.75\\
     c_{31}&=-5.0&c_{32}&=4.75&c_{33}&=-2.25
 \end{matrix}$$
-
-\subsection*{Exercise A4.12}
+\section*{Exercise A4.3}
+we have, that in order for $(A+uv^T)$ to be nonsingular, there must
+exist a matrix $B$ such that $(A+uv^T)B=I$. Therefore need to prove that
+$$(A+uv^T)\left(A^{-1}-\frac{1}{1+v^TA^{-1}u}A^{-1}uv^TA^{-1}\right)=I$$
+\begin{align*}
+    (A+uv^T)\left(A^{-1}-\frac{1}{1+v^TA^{-1}u}A^{-1}uv^TA^{-1}\right)=&I-\frac{1}{1+v^TA^{-1}u}uv^TA^{-1}\\
+                &+uv^T A^{-1}-\frac{1}{1+v^TA^{-1}u}uv^TA^{-1}uv^TA^{-1}\\
+                =&I-\frac{1}{1+v^TA^{-1}u}uv^TA^{-1}\\
+                &+uv^T A^{-1}-\frac{(v^TA^{-1}u)}{1+v^TA^{-1}u}uv^TA^{-1}\\
+                =&I-\frac{1+v^TA^{-1}u}{1+v^TA^{-1}u}uv^TA^{-1}+uv^T A^{-1}\\
+                =&I-uv^T A^{-1}+uv^T A^{-1}\\
+                =&I
+\end{align*}
+Therefore we have that $A$ is singular if $1+v^TA^{-1}u\neq 0$, ie if $v^TA^{-1}u\neq -1$, 
+and that $(A+uv^T)^{-1}=A^{-1}-\frac{1}{1+v^TA^{-1}u}A^{-1}uv^TA^{-1}$.
+\section*{Exercise A4.12}
 \subsection*{(a)}
 When $a=1$, because this would make the columns not linearly independent.
 \subsection*{(b)}
@@ -100,4 +114,33 @@ $$c_2+\alpha c_1=0$$
 thus we get that $c_2=-\alpha c_1$ and thus
 $$c_1=\frac{1}{1-\alpha^2}$$
 $$c_2=-\frac{\alpha}{1-\alpha^2}$$
+\section*{Exercise A4.9}
+\subsection*{(a)}
+We have 
+\begin{align*}
+    YX&=B^{\dagger}A^{\dagger}AB\\
+    &=B^{\dagger}IB\\
+    &=B^{\dagger}B\\
+    &=I
+\end{align*}
+$I$ is symmetric, so $YX$ is symmetric
+\subsection*{(b)}
+\subsection*{(c)}
+We have that
+\begin{align*}
+    YXY&=B^{\dagger}A^{\dagger}ABY\\
+    &=B^{\dagger}IBY\\
+    &=B^{\dagger}BY\\
+    &=IY\\
+    &=Y
+\end{align*}
+\subsection*{(d)}
+We have
+\begin{align*}
+    XYX&=ABB^{\dagger}A^{\dagger}AB\\
+    &=ABB^{\dagger}IB\\
+    &=ABB^{\dagger}BY\\
+    &=AB\\
+    &=X
+\end{align*}
 \end{document}

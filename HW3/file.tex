@@ -118,13 +118,32 @@ $$c_2=-\frac{\alpha}{1-\alpha^2}$$
 \subsection*{(a)}
 We have 
 \begin{align*}
-    YX&=B^{\dagger}A^{\dagger}AB\\
-    &=B^{\dagger}IB\\
+    (YX)^T&=\left(AB\right)^T\left(B^{\dagger}A^{\dagger}\right)^T\\
+    &=B^TA^T\left(A^{\dagger}\right)^T\left(B^{\dagger}\right)^T\\
+    &=B^TA^T\left(A^T\right)^{\dagger}\left(B^{\dagger}\right)^T\\
+    &=B^T\left(B^{\dagger}\right)^T\\
+    &=B^T\left(B^T(BB^T)^{-1}\right)^T
+    &=B^T\left((BB^T)^{-1}B\right)\\
+    &=\left(B^T(BB^T)^{-1}\right)B\\
     &=B^{\dagger}B\\
-    &=I
+    &=B^{\dagger}A^{\dagger}AB\\
+    &=YX
 \end{align*}
-$I$ is symmetric, so $YX$ is symmetric
+Therefore $YX$ is symmetric.
 \subsection*{(b)}
+We have that
+\begin{align*}
+    (XY)^T&=Y^TX^T\\
+    &=\left(B^{\dagger}A^{\dagger}\right)^T\left(AB\right)^T\\
+    &= \left(A^{\dagger}\right)^T\left(B^{\dagger}\right)^T B^TA^T\\
+    &=\left(A^{\dagger}\right)^TA^T
+    &=\left(A(A^TA)^{-1}\right)A^T\\
+    &=A\left((A^TA)^{-1}A^T\right)\\
+    &=AA^{\dagger}\\
+    &=ABB^{\dagger}A^{\dagger}\\
+    &=XY
+\end{align*}
+Therefore $XY$ is symmetric
 \subsection*{(c)}
 We have that
 \begin{align*}

@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1666117381 "c:/Users/Lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" "file.pdf" "file" 1666117382
+["pdflatex"] 1666153543 "c:/Users/Lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" "file.pdf" "file" 1666153544
   "../preamble.tex" 1664765627 597 5791e705ff366eb94d680dff3f2fe48a ""
   "Problem1.jl" 1666028635 167 ddf7594feaf404c6e4e6323497b4b993 ""
   "Problem2.jl" 1666064924 409 9821e7fad72ac71a969f5788ef0eb01e ""
   "Problem3.jl" 1666064924 232 fea264fadfc21e22281bdf679c7004fd ""
-  "c:/Users/Lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" 1666117381 4811 5c8d8c6fa1322a6c47b53075e10da979 ""
+  "c:/Users/Lawrence/Desktop/UCLA/ECE133A/HW3/file.tex" 1666153542 5546 9607600f8754dac0db02420c83ae9336 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1664169123 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1664169123 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1664170015 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -99,8 +99,8 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1664173825 4635069 7677ee69604aae14ed48b153c111a7f7 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1664173939 3058684 372e0c0dae1f62bf1e7332b92ec9e6a1 ""
   "c:/texlive/2022/texmf.cnf" 1664173806 713 e69b156964470283e0530f5060668171 ""
-  "file.aux" 1666117382 293 03012fecb2b2028e171bc176b3657e2d "pdflatex"
-  "file.tex" 1666117381 4811 5c8d8c6fa1322a6c47b53075e10da979 ""
+  "file.aux" 1666153544 293 03012fecb2b2028e171bc176b3657e2d "pdflatex"
+  "file.tex" 1666153542 5546 9607600f8754dac0db02420c83ae9336 ""
   (generated)
   "file.aux"
   "file.log"

@@ -1,0 +1,18 @@
+\include{"../preamble.tex"}
+\title{ECE 133A HW 4}
+\begin{document}
+\maketitle
+\section*{Exercise A5.6}
+\subsection*{(a)}
+Let $DX+XD=A$, we have that $A_{ij}=(D_{ii}+D_{jj})X_{ij}$,
+Since $DX+XD=B$ we have that 
+$$A_{ij}=B_{ij}$$
+$$B_{ij}=(D_{ii}+D_{jj})X_{ij}$$
+Therefore we get that
+$$X_{ij}=\frac{B_{ij}}{D_{ii}+D_{jj}}$$
+for any $i,j$, this will exist since $D_{ii}+D_{jj}\neq 0$ for all i and j
+this computation will cost us 2 flops, 1 for addition and one for division
+so in total solving for all $X_{ij}$ will cost us $2n^2$ flops.
+\section*{Exercise A6.3}
+\subsection*{(a)}
+\end{document}

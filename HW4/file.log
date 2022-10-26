@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.9.26)  25 OCT 2022 05:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.9.26)  26 OCT 2022 12:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -287,20 +287,44 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./file.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (62.50824pt too wide) detected at line 38
+\OML/cmm/m/it/12 LX \OT1/cmr/m/n/12 = []
+ []
+
+[2]
+Overfull \hbox (39.01385pt too wide) in paragraph at lines 75--78
+\T1/cmr/m/n/12 Likewise for $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 We[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 W$\T1/cmr/m/n/12 , we have that the ith row of $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 We[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 W$\T1/cmr/m/n/12 , $[][]$
+ []
+
+[3]
+/home/lawrence/Desktop/UCLA/ECE133A/HW4/file.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (140.06917pt too wide) in paragraph at lines 102--106
+\T1/cmr/m/n/12 We have that $\OML/cmm/m/it/12 WA[]$ \T1/cmr/m/n/12 is a ma-trix with the ith col-umn be-ing $\OT1/cmr/m/n/12 [[][] \OML/cmm/m/it/12 a[]; [][] a[]![]; [] [][] a[]![]\OT1/cmr/m/n/12 ]$
+ []
+
+[4] [5] (./file.aux) ) 
 Here is how much of TeX's memory you used:
- 7514 strings out of 478238
- 119054 string characters out of 5850456
- 397800 words of memory out of 5000000
- 25656 multiletter control sequences out of 15000+600000
- 481127 words of font info for 63 fonts, out of 8000000 for 9000
+ 7524 strings out of 478238
+ 119158 string characters out of 5850456
+ 410800 words of memory out of 5000000
+ 25661 multiletter control sequences out of 15000+600000
+ 484990 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,6n,82p,368b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on file.pdf (1 page, 102975 bytes).
+ 74i,14n,82p,368b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on file.pdf (5 pages, 155854 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

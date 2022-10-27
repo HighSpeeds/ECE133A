@@ -16,6 +16,7 @@ for i=1:3
 end
 
 x=M\b
+println(b)
 print("x= ")
 println(round.(x,digits=3))
 

@@ -8,3 +8,6 @@ for i=1:5
 end
 print("theta= ")
 println(round.(A\y,digits=3))
+
+println("A=")
+println(A)

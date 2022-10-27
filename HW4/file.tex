@@ -61,6 +61,68 @@ Therefore to solve for all $X_{ij}$ it will cost us
 \end{align*}
 \section*{Exercise A6.3}
 \subsection*{(a)}
+Since $S^T=-S$ we have that
+$$S=\begin{bmatrix}
+    0 & c_{12} & \cdots & c_{1n} \\
+    -c_{12} & 0 & \cdots & c_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    -c_{1n} & -c_{2n} & \cdots & 0
+\end{bmatrix}$$
+therefore we have that for any $X=[x_1,x_2,\cdots,x_n]^T$ 
+$$Sx=\begin{bmatrix}
+    0 + c_{12}x_2 + \cdots + c_{1n}x_n\\
+    -c_{12}x_1 + 0 + \cdots + c_{2n}x_n\\
+    \vdots \\
+    -c_{1n}x_1 - c_{2n}x_2 + \cdots + 0
+\end{bmatrix}$$
+Therefore we have:
+$$x^TSx=\sum_{i=1}^n\sum_{j=i+1}^n c_{ij}x_ix_j-\sum_{i=1}^n\sum_{j=i+1}^n c_{ij}x_ix_j=0$$
+In order for $(I-S)x=0$ will only happen if $x=0$, 
+\begin{align*}
+    (I-S)x &= 0 \\
+    x^T(I-S)x &= 0\\
+    x^TIx-x^TSx &= 0\\
+    x^TIx &= 0
+    x^Tx&=0
+    x\cdot x &= 0
+\end{align*}
+Therefore  $(I-S)x=0$ will only happen if $x=0$ so we have
+that $I-S$ is nonsingular.
+\subsection*{(b)}
+Similarly as how $I-S$ is nonsingular we can show that $I+S$ is nonsingular.
+Since
+\begin{align*}
+    (I+S)x &= 0 \\
+    x^T(I+S)x &= 0\\
+    x^TIx+x^TSx &= 0\\
+    x^TIx &= 0
+    x^Tx&=0
+    x\cdot x &= 0
+\end{align*}
+Which once again leads to the result that $(I+S)x=0$
+only when $x=0$, and thus $I+S$ is nonsingular.
+Therefore we have that $(I-S)^{-1}$ and $(I+S)^{-1}$ exist.
+Thus we get
+\begin{align*}
+    (I+S)(I-S)^{-1} &= (2I-(I-S))(I-S)^{-1} \\
+    &=2(I-S)^{-1}-I\\
+    &=(I-S)^{-1}(2I-(I-S))\\
+    &=(I-S)^{-1}(I+S)
+\end{align*}
+\subsection*{(c)}
+In order for a matrix $A$ to be symmetric we must have that 
+$A^TA=I$ we have 
+\begin{align*}
+    \left((I+S)(I-S)^{-1}\right)^T\left((I+S)(I-S)^{-1}\right)&=
+        \left((I-S)^{-1}\right)^T(I-S)(I+S)(I-S)^{-1}\\
+        &=\left((I-S)^{-1}\right)^T(I-S)(I-S)^{-1}(I+S)\\
+        &=\left((I-S)^{-1}\right)^T(I+S)\\
+        &=\left((I-S)^{T}\right)^{-1}(I-S)^{-1}(I+S)\\
+        &=\left((I+S)\right)^{-1}(I+S)\\
+        &=I
+\end{align*}
+Therefore we have that $A=(I+S)(I-S)^{-1}$ is orthogonal.
+
 \section*{Exercise A6.9}
 \subsection*{(a)}
 We have that 
@@ -102,7 +164,7 @@ T(a)&=\sum_{i=1}^n s^{i-1}A_i\\
 \end{align*}
 We have that $WA_i$ is a matrix
 with the ith column being $[\sum_{j=1}^n a_j, \sum_{j=1}^n a_j\omega^{-(j-1}, \cdots \sum_{j=1}^n a_j\omega^{-(j-1)(n-1)}]$
-and the rest of the matrix being 0, therefore we have that, $
+and the rest of the matrix being 0, therefore we have that,
 
 
 

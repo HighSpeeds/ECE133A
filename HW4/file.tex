@@ -1,0 +1,123 @@
+\include{"../preamble.tex"}
+\title{ECE 133A HW 4}
+\begin{document}
+\maketitle
+\section*{Exercise A5.6}
+\subsection*{(a)}
+Let $DX+XD=A$, we have that $A_{ij}=(D_{ii}+D_{jj})X_{ij}$,
+Since $DX+XD=B$ we have that 
+$$A_{ij}=B_{ij}$$
+$$B_{ij}=(D_{ii}+D_{jj})X_{ij}$$
+Therefore we get that
+$$X_{ij}=\frac{B_{ij}}{D_{ii}+D_{jj}}$$
+for any $i,j$, this will exist since $D_{ii}+D_{jj}\neq 0$ for all i and j
+this computation will cost us 2 flops, 1 for addition and one for division
+so in total solving for all $X_{ij}$ will cost us $2n^2$ flops.
+\subsection*{(b)}
+Let
+$$L=\begin{bmatrix}
+    L_{11} & 0 & \cdots & 0 \\
+    L_{21} & L_{22} & \cdots & 0 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    L_{n1} & L_{n2} & \cdots & L_{nn}
+\end{bmatrix}$$
+$$
+X=\begin{bmatrix}
+    X_{11} & X_{12} & \cdots & X_{1n} \\
+    X_{21} & X_{22} & \cdots & X_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    X_{n1} & X_{n2} & \cdots & X_{nn}
+\end{bmatrix}$$
+Then we have that
+
+$$LX=\begin{bmatrix}
+    L_{11}X_{11} & L_{11}X_{12} & \cdots & L_{11}X_{1n} \\
+    L_{21}X_{11}+L_{22}X_{21} & L_{21}X_{12}+L_{22}X_{22} & \cdots & L_{21}X_{1n}+L_{22}X_{2n} \\
+    \vdots & \vdots & \cdots & \vdots \\
+    L_{n1}X_{11}+\cdots+L_{nn}X_{n1} & L_{n1}X_{12}+\cdots+L_{nn}X_{n2} & \cdots & L_{n1}X_{1n}+\cdots+L_{nn}X_{nn}
+\end{bmatrix}$$
+And 
+$$XL^T=\begin{bmatrix}
+    L_{11}X_{11} & L{21}X_{11}+L{22}X_{12}& \cdots & L_{n1}X_{11}+\cdots+L_{nn}X_{1n} \\
+    L_{11}X_{21} & L{21}X_{21}+L{22}X_{22}& \cdots & L_{n1}X_{21}+\cdots+L_{nn}X_{2n} \\
+    \vdots & \vdots & \cdots & \vdots \\
+    L_{11}X_{n1} & L{21}X_{n1}+L{22}X_{n2}& \cdots & L_{n1}X_{n1}+\cdots+L_{nn}X_{nn}
+\end{bmatrix}$$
+therefore we have that 
+$$B_{ij}=\sum_{k=1}^i L_{ik}X_{kj}+\sum_{k=1}^j L_{jk}X_{ik}$$
+Therefore if we know $X_{lm}$ for all $0 \leq l\leq i$ and $0\leq m\leq j$ 
+Except for $X_{ij}$ we can express
+$$X_{ij}=\frac{B_{ij}-\sum_{k=1}^{i-1} L_{ik}X_{kj}-\sum_{k=1}^{j-1} L_{jk}X_{ik}}{L_{ii}+L_{jj}}$$
+Since $L_{ii}+L_{jj}\neq 0$ for all $i,j$ this will exist. The two summations will cost us $2(i-1+j-1)-2$ flops, and the subtractions will cost us
+2 flops, and the division will cost us 2 flops since we need to first compute the sum 
+$L_{ii}+L_{jj}$
+so in total this computation will cost us $2(i+j)$ flops.
+Therefore to solve for all $X_{ij}$ it will cost us
+\begin{align*}
+    \sum_{i=1}^n\sum_{j=1}^n 2(i+j) &= 2\sum_{i=1}^n\sum_{j=1}^n (i+j) \\
+    &=2\sum_{i=1}^n ni+\sum_{j=1}^n nj \\
+    &=2\left(\frac{n^2(n+1)}{2}+\frac{n^2(n+1)}{2} \right)\\
+    &=\boxed{2n^2(n+1)}
+\end{align*}
+\section*{Exercise A6.3}
+\subsection*{(a)}
+\section*{Exercise A6.9}
+\subsection*{(a)}
+We have that 
+$$S^{k-1}=\begin{bmatrix}
+    0 & I_{k-1}\\
+    I_{n-k+1} & 0
+\end{bmatrix}$$
+Therefore $S^{k-1}$ will circularly shift $W$ when we multiple $W$ by 
+it, in other words, the ith row of $WS^{k-1}$, $\left(WS^{k-1}\right)_{i}$ will be 
+$$\left(WS^{k-1}\right)_{i}=\begin{bmatrix}
+    \omega^{-i(k-1)} & \omega^{-ik} & \cdots & \omega^{-i(n-1)} & \omega^0 & \omega^i & \cdots & \omega^{i(k-2)}
+\end{bmatrix}$$ 
+Likewise for $\text{\textbf{diag}}(We_{k})W$, we have that 
+the ith row of $\text{\textbf{diag}}(We_{k})W$, $\left(\text{\textbf{diag}}(W_{e_{k}})W\right)_{i}$ will be
+\begin{align*}
+\left(\text{\textbf{diag}}(We_{k})W\right)_{i} &= \begin{bmatrix}
+    \omega^{-i(k-1)} & \omega^{-i}\omega^{-i(k-1)}  & \cdots & \omega^i{n-1}\omega^{-i(k-1)}
+\end{bmatrix} \\
+&= \begin{bmatrix}
+    \omega^{-i(k-1)} & \omega^{-ik} & \cdots & \omega^{-i(n+k-2)}
+\end{bmatrix}
+\end{align*}
+Therefore for $k>1$, (since it is obvious for $k=1$ the equality holds)
+$$\left(\text{\textbf{diag}}(We_{k})W\right)_{i}=
+\begin{bmatrix}
+    \omega^{-i(k-1)} & \omega^{-ik} & \cdots & \omega^{-i(n-1)} & \omega^0 & \omega^i & \cdots & \omega^{i(k-2)}
+\end{bmatrix}
+$$
+Since $\omega=e^{2\pi j/n}$.\\
+Therefore we have that
+$$WS^{k-1}=\text{\textbf{diag}}(We_{k})W$$
+\subsection*{(b)}
+Let $A_i$ be the matrix with the ith column
+being $a$ and the rest of the matrix being 0, then we have that 
+\begin{align*}
+T(a)&=\sum_{i=1}^n s^{i-1}A_i\\
+&=\sum_{i=1}^n\frac{1}{n}W^H\text{\textbf{diag}}(We_i)WA_i\\
+&=\frac{1}{n}W^H\sum_{i=1}^n text{\textbf{diag}}(We_i)WA_i\\
+\end{align*}
+We have that $WA_i$ is a matrix
+with the ith column being $[\sum_{j=1}^n a_j, \sum_{j=1}^n a_j\omega^{-(j-1}, \cdots \sum_{j=1}^n a_j\omega^{-(j-1)(n-1)}]$
+and the rest of the matrix being 0, therefore we have that, $
+
+
+
+\begin{align*}
+    WA_i&=A_i^TW^T
+    &=A_i^TW
+\end{align*}
+Therefore we have 
+\begin{align*}
+    T(a)&=\sum_{i=1}^n\frac{1}{n}W^H\text{\textbf{diag}}(We_k)WA_i\\
+    &=\sum_{i=1}^n\frac{1}{n}W^H\text{\textbf{diag}}(We_k)A_i^TW\\
+    &=\frac{1}{n}W^H\left(\sum_{i=1}^n\text{\textbf{diag}}(We_k)A_i^T\right)W
+\end{align*}
+We have that     QQ
+
+
+
+\end{document}

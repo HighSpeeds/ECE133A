@@ -178,7 +178,128 @@ Therefore we have
     &=\sum_{i=1}^n\frac{1}{n}W^H\text{\textbf{diag}}(We_k)A_i^TW\\
     &=\frac{1}{n}W^H\left(\sum_{i=1}^n\text{\textbf{diag}}(We_k)A_i^T\right)W
 \end{align*}
-We have that     QQ
+We have that   
+\section*{Exercise A6.15}
+\subsection*{(a)}
+We have
+\begin{align*}
+    Q\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}Q^T&=\frac{1}{2}
+    \begin{bmatrix}
+        I_n & I_n\\
+        J_n & -J_n
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_n & J_n\\
+        I_n & -J_n
+    \end{bmatrix}\\
+    &=\frac{1}{2}
+    \begin{bmatrix}
+        I_n & I_n\\
+        J_n & -J_n
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_n & J_n\\
+        -I_n & J_n
+    \end{bmatrix}\\
+    &=\frac{1}{2}
+    \begin{bmatrix}
+        0 & 2J_n\\
+        2J_n & 0
+    \end{bmatrix}\\
+    &=\begin{bmatrix}
+        0 & J_n\\
+        J_n & 0
+    \end{bmatrix}
+\end{align*}
+If a matrix is orthogonal then we have that $Q^TQ=I_{2n}$, therefore we have that
+\begin{align*}
+    Q^TQ&=\frac{1}{2}\begin{bmatrix}
+        I_n & J_n\\
+        I_n & -J_n
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_n & I_n\\
+        J_n & -J_n
+    \end{bmatrix}\\
+    &=\frac{1}{2}\begin{bmatrix}
+        2I_n & 0\\
+        0 & 2I_n
+    \end{bmatrix}\\
+    &=I_{2n}
+\end{align*}
+So $Q$ is orthogonal.
+\subsection*{(b)}
+We have
+\begin{align*}
+    J_{2n}A&=AJ_{2n}\\
+    Q^TJ_{2n}A&=Q^TAJ_{2n}\\
+    Q^TJ_{2n}AQ&=Q^TAJ_{2n}Q\\
+    Q^TJ_{2n}AQ&=Q^TAQ\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}Q^TQ\\
+    Q^TJ_{2n}AQ\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}&=Q^TAQ\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}\\
+    Q^TJ_{2n}AQ\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}&=Q^TAQ\\
+    Q^TAQ&=\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}Q^TAQ\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}\\
+    Q^TAQ&=\frac{1}{2} \begin{bmatrix}
+        I_n & J_n\\
+        -I_n & J_n
+    \end{bmatrix} A \begin{bmatrix}
+        I_n & -I_n\\
+        J_n & J_n
+    \end{bmatrix}
+\end{align*}
+Let us express $A$ in terms of n x n submatricies, $B$, $C$, $D$, and $E$. 
+We have
+$A=\begin{bmatrix}
+    B & D\\
+    E & C
+\end{bmatrix}$, therefore we have
+\begin{align*}
+    Q^TAQ&=\frac{1}{2} \begin{bmatrix}
+        I_n & J_n\\
+        -I_n & J_n
+    \end{bmatrix} A \begin{bmatrix}
+        I_n & -I_n\\
+        J_n & J_n
+    \end{bmatrix}\\
+    &=\frac{1}{2} \begin{bmatrix}
+        I_n & J_n\\
+        -I_n & J_n
+    \end{bmatrix} \begin{bmatrix}
+        B & D\\
+        E & C
+    \end{bmatrix} \begin{bmatrix}
+        I_n & -I_n\\
+        J_n & J_n
+    \end{bmatrix}
+\end{align*}
+
 
 
 

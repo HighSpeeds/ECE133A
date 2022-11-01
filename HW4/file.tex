@@ -279,7 +279,34 @@ We have
 $A=\begin{bmatrix}
     B & D\\
     E & C
-\end{bmatrix}$, therefore we have
+\end{bmatrix}$, and
+\begin{align*}
+    J_{2n}A&=AJ_{2n}\\
+    \begin{bmatrix}
+        0 & J_n\\
+        J_n & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        B & D\\
+        E & C
+    \end{bmatrix}
+    &=\begin{bmatrix}
+        B & D\\
+        E & C
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & J_n\\
+        J_n & 0
+    \end{bmatrix}\\
+    \begin{bmatrix}
+        J_nE & J_nC\\
+        J_nB & J_nD
+    \end{bmatrix}&=\begin{bmatrix}
+        DJ_n & BJ_n\\
+        CJ_n & EJ_n
+    \end{bmatrix}
+\end{align*}
+Therefore we have:
 \begin{align*}
     Q^TAQ&=\frac{1}{2} \begin{bmatrix}
         I_n & J_n\\
@@ -297,8 +324,52 @@ $A=\begin{bmatrix}
     \end{bmatrix} \begin{bmatrix}
         I_n & -I_n\\
         J_n & J_n
+    \end{bmatrix}\\
+    &=\frac{1}{2} \begin{bmatrix}
+        I_n & J_n\\
+        -I_n & J_n
+    \end{bmatrix} \begin{bmatrix}
+        B+DJ_n & -B+DJ_n\\
+        E+CJ_n & -E+CJ_n
+    \end{bmatrix}\\
+    &=\frac{1}{2} \begin{bmatrix}
+        B+DJ_n+J_nE+J_nCJ_n & -B+DJ_n-J_nE+J_nCJ_n\\
+        -B-DJ_n+J_nE+J_nCJ_n & B-DJ_n-J_nE+J_nCJ_n
     \end{bmatrix}
 \end{align*}
+From $J_{2n}A=AJ_{2n}$ we get that $DJ_n-J_nE=0$ and 
+$CJ_n-J_nB=0$. Therefore we have that $-B+DJ_n-J_nE+J_nCJ_n=0$
+and $-B-DJ_n+J_nE+J_nCJ_n=0$ and thus we get:
+$$Q^TAQ=\frac{1}{2} \begin{bmatrix}
+        B+DJ_n+J_nE+J_nCJ_n & 0\\
+        0 & B-DJ_n-J_nE+J_nCJ_n
+    \end{bmatrix}$$
+\subsection*{(c)}
+Multiplying both sides of $Ax=b$ by $Q^T$ we get:
+$$Q^TAQx=Q^Tb$$
+Then letting $x=Qy$ we get
+$$Q^TAQy=Q^Tb$$
+Since $Q^TAQ$ is block diagonal, this is just solving
+two n x n systems of equations. which will take $2\cdot\frac{2}{3}n^3$
+operations. Since multiplying $b$ by $Q^T$ takes $2n^2$ operations,
+and multiplying $y$ by $Q$ takes $2n^2$ operations, we have that
+the leading term of our imporoved solution is $\frac{4}{3}n^3$ So
+we have been able to reduce the number of flops by a factor if $4$.
+\section*{Exercise A6.16}
+We have that 
+$$A_{ij}=\sum_{k=1}^n Q_{ik}R_{kj}$$
+Since $R$ is upper triangular we have that 
+$$A_{ij}=\sum_{k=i}^j Q_{ik}R_{kj}$$
+
+\section*{Exercise A7.5}
+We first LU factorize $A$, which will cost us $\frac{2}{3}n^3$ flops. 
+Then we solve for $x'=A^{-1}b$, which will cost us $2n^2$ flops, then with this we can
+solve for $x''=A^{-2}b=A^{-1}x'$, which will cost us $2n^2$ flops.
+Then once again, solving for $x'''=A^{-3}b=A^{-1}x''$, which will cost us $2n^2$ flops.
+then sum up $b$ and $x'$, $x''$, $x'''$ to get $x$, which will cost us 
+$3n$ flops. So in total we will take $\boxed{\frac{2}{3}n^3+6n^2+3n}$ flops.
+
+
 
 
 

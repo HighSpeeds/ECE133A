@@ -368,6 +368,21 @@ solve for $x''=A^{-2}b=A^{-1}x'$, which will cost us $2n^2$ flops.
 Then once again, solving for $x'''=A^{-3}b=A^{-1}x''$, which will cost us $2n^2$ flops.
 then sum up $b$ and $x'$, $x''$, $x'''$ to get $x$, which will cost us 
 $3n$ flops. So in total we will take $\boxed{\frac{2}{3}n^3+6n^2+3n}$ flops.
+\section*{Exercise A7.10}
+First we LU factorize $A$, which will cost us $\frac{2}{3}n^3$ flops. 
+Then we solve for $x=A^{-1}b$, which will cost us $2n^2$ flops, and we solve
+for $x_u=A^{-1}u$, which will cost us $2n^2$ flops, then we have
+$$y=(A+uv^T)^{-1}b=x-\frac{1}{1+v^Tx_u}x_uv^Tx$$
+Then we calculate $v^Tx_u$, which will cost us $2n-1$ flops and 
+$v^Tx$ which will likewise cost $2n-1$ flops. Then we have
+$$y=(A+uv^T)^{-1}b=x-\frac{v^Tx}{1+v^Tx_u}x_u$$
+Solving for x consists of first of all finding $\frac{x_uv^T}{1+v^Tx_u}$ given 
+$v^Tx_u$ and $v^Tx$, which will cost $2$ flops, and then we multiply that value 
+to every value in $x_u$, which will cost us $n$ flops, and then subtracting
+the resulting vector from $x$ will once again cost us $n$ flops, 
+thus we have that the total flops needed would be:
+$$\frac{2}{3}n^3+4n^2+4n+2n=\boxed{\frac{2}{3}n^3+4n^2+6n}$$
+
 
 
 

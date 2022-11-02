@@ -160,25 +160,38 @@ being $a$ and the rest of the matrix being 0, then we have that
 \begin{align*}
 T(a)&=\sum_{i=1}^n s^{i-1}A_i\\
 &=\sum_{i=1}^n\frac{1}{n}W^H\text{\textbf{diag}}(We_i)WA_i\\
-&=\frac{1}{n}W^H\sum_{i=1}^n text{\textbf{diag}}(We_i)WA_i\\
+&=\frac{1}{n}W^H\sum_{i=1}^n \text{\textbf{diag}}(We_i)WA_i\\
 \end{align*}
 We have that $WA_i$ is a matrix
-with the ith column being $[\sum_{j=1}^n a_j, \sum_{j=1}^n a_j\omega^{-(j-1}, \cdots \sum_{j=1}^n a_j\omega^{-(j-1)(n-1)}]$
-and the rest of the matrix being 0, therefore we have that,
-
-
-
+with the ith column being $$\left[\sum_{j=1}^n a_j, \sum_{j=1}^n a_j\omega^{-(j-1}, \cdots \sum_{j=1}^n a_j\omega^{-(j-1)(n-1)}\right]$$
+and the rest of the matrix being 0, therefore we have that, $\text{\textbf{diag}}(We_i)WA_i$
+is a matrix with the ith column being $$\left[\sum_{j=1}^n a_j, \omega^{-i}\sum_{j=1}^n a_j\omega^{-(j-1}, 
+\cdots \omega^{-i(n-1)}\sum_{j=1}^n a_j\omega^{-(j-1)(n-1)}\right]$$ Therefore we have
+that 
 \begin{align*}
-    WA_i&=A_i^TW^T
-    &=A_i^TW
+    \sum_{i=1}^n \text{\textbf{diag}}(We_i)WA_i&=\text{\textbf{diag}}(Wa)W
 \end{align*}
-Therefore we have 
-\begin{align*}
-    T(a)&=\sum_{i=1}^n\frac{1}{n}W^H\text{\textbf{diag}}(We_k)WA_i\\
-    &=\sum_{i=1}^n\frac{1}{n}W^H\text{\textbf{diag}}(We_k)A_i^TW\\
-    &=\frac{1}{n}W^H\left(\sum_{i=1}^n\text{\textbf{diag}}(We_k)A_i^T\right)W
-\end{align*}
-We have that   
+And thus we have that
+$$T(a)=\frac{1}{n}W^H\text{\textbf{diag}}(Wa)W$$
+\subsection*{(c)}
+Therefore we have that 
+$$T(a)x=\frac{1}{n}W^H\text{\textbf{diag}}(Wa)Wx$$
+$Wx$ and $Wa$ are the fourier transform of $x$ and $a$ respectively, therefore we can calculate
+them in $n\log(n)$ time each. Then we have that $\text{\textbf{diag}}(Wa)Wx$ is simply just multiplying
+the ith value of $Wa$ by the ith value of $Wx$, which can be done in $n$ time. Then $\frac{1}{n}W^H\text{\textbf{diag}}(Wa)Wx$
+is just taking the inverse fourier transform of our calculated value, which will cost us $n\log(n)$ time. Therefore
+the total time of our algorithm is $\boxed{3n\log(n)+n}$ time
+\subsection*{(d)}
+The inverse of $T(a)$ is  $$T(a)^{-1}=\frac{1}{n}W\text{\textbf{diag}}(\frac{1}{Wa})W^H$$ therefore 
+we can calculate b more efficently, similarly to hwo we did it with part c. It is implemented below in Julia:
+\lstinputlisting[basicstyle=\tiny,]{69d.jl}
+Which results in the following graphs for the times of the two methods:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{69d.png}
+    \caption{Time of the two methods}
+    \label{fig:69d}
+\end{figure}
 \section*{Exercise A6.15}
 \subsection*{(a)}
 We have
@@ -390,7 +403,7 @@ $$\frac{2}{3}n^3+4n^2+4n+2n=\boxed{\frac{2}{3}n^3+4n^2+6n}$$
 
 
 
-
+  
 
 
 \end{document}

@@ -359,7 +359,11 @@ we have been able to reduce the number of flops by a factor if $4$.
 We have that 
 $$A_{ij}=\sum_{k=1}^n Q_{ik}R_{kj}$$
 Since $R$ is upper triangular we have that 
-$$A_{ij}=\sum_{k=i}^j Q_{ik}R_{kj}$$
+$$A_{ij}=\sum_{k=1}^j Q_{ik}R_{kj}$$
+Since we have that $A_{ij}=0$ for $i>j+1$, and since $R_{kj}$
+is not necessarily $0$ for $k\leq j$ then we have that
+$Q_{ik}=0$ for $k\leq j<i-1$. Therefore we have that
+$Q_{ij}=0$ for $i>j+1$.  
 
 \section*{Exercise A7.5}
 We first LU factorize $A$, which will cost us $\frac{2}{3}n^3$ flops. 

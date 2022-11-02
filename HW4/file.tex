@@ -358,15 +358,42 @@ $$Q^TAQ=\frac{1}{2} \begin{bmatrix}
         0 & B-DJ_n-J_nE+J_nCJ_n
     \end{bmatrix}$$
 \subsection*{(c)}
-Multiplying both sides of $Ax=b$ by $Q^T$ we get:
-$$Q^TAQx=Q^Tb$$
-Then letting $x=Qy$ we get
-$$Q^TAQy=Q^Tb$$
-Since $Q^TAQ$ is block diagonal, this is just solving
-two n x n systems of equations. which will take $2\cdot\frac{2}{3}n^3$
-operations. Since multiplying $b$ by $Q^T$ takes $2n^2$ operations,
-and multiplying $y$ by $Q$ takes $2n^2$ operations, we have that
-the leading term of our imporoved solution is $\frac{4}{3}n^3$ So
+Multiplying both sides by $J_{2n}$ we get:
+$$J_{2n}Ax=J_{2n}b$$
+Since $J_{2n}$ is a permutation matrix, calculating $J_{2n}b$ costs us 
+0 flops, and since $J_{2n}A=AJ_{2n}$ we have that 
+$$AJ_{2n}x=J_{2n}b$$
+Multiplying both sides by $Q^T$ we get:
+$$Q^TAJ_{2n}x=Q^TJ_{2n}b$$
+$$Q^TAQ\begin{bmatrix}
+        I_n & 0\\
+        0 & -I_n
+    \end{bmatrix}Q^Tx=Q^TJ_{2n}b$$
+Since $J_{2n}$ is a permutation matrix, calculating $Q^TJ_{2n}$ costs us 
+0 flops and calculating $Q^TJ_{2n}b$ costs us on the order of $n^2$ flops.
+And since $Q^TAQ$ results in a block diagonal matrix whose
+calculation consists of multiplications by permutation matricies (0 flops)
+and addition of two n x n matricies (order of $n^2$ flops),
+We have that calculating 
+$$Q^TAQy=Q^TJ_{2n}b$$
+will have a leading term of $2\cdot\frac{2}{3}n^3$ flops. Then to find 
+$x$ we just need to solve
+$$\begin{bmatrix}
+    I_n & 0\\
+    0 & -I_n
+\end{bmatrix}Q^Tx=y$$
+Since the inverse of $Q$ is $Q^T$ and the inverse of $\begin{bmatrix}
+    I_n & 0\\
+    0 & -I_n
+\end{bmatrix}$ is itself we have that
+$$x=Q\begin{bmatrix}
+    I_n & 0\\
+    0 & -I_n
+\end{bmatrix}y$$
+Computing this is just two matrix multiplications 
+so it will just cost us on the order of $n^2$ flops.
+Therefore the total cost of solving $Ax=b$ is on the order of
+$2\cdot\frac{2}{3}n^3$ flops. So
 we have been able to reduce the number of flops by a factor if $4$.
 \section*{Exercise A6.16}
 We have that 

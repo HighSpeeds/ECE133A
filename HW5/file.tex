@@ -1,0 +1,24 @@
+\include{"../preamble.tex"}
+\title{ECE 133A HW 4}
+\begin{document}
+\maketitle
+\section*{Exercise T13.3}
+\subsection*{(a)}
+With the following julia code we get:
+\lstinputlisting[
+    basicstyle=\tiny, %or \small or \footnotesize etc.
+]{problem1.jl}
+that 
+$$\theta_1=3.125592633829346$$
+and 
+$$\theta_2=0.1540181798438225$$
+which results in the following fit:\\
+\includegraphics[scale=0.5]{"Moore's Law.png"}
+\subsection*{(b)}
+From our fit we expect the number of transistors to be:
+$$10^{\theta_1+\theta_2(2015-1970)}\approx 10^{10}$$
+Which is more than the acutally number of $4\cdot 10^9$ transistors:
+\subsection*{(c)}
+This is in line with Moore's law since
+$2\theta_2=0.30803635968$ which is close to $\log_{10}(2)=0.30102999566$
+\end{document}

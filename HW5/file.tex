@@ -23,6 +23,23 @@ This is in line with Moore's law since
 $2\theta_2=0.30803635968$ which is close to $\log_{10}(2)=0.30102999566$
 \section*{Exercise T12.12}
 \subsection*{(a)}
+\section*{Exercise A8.3}
+We can get that 
+$$\alpha t_i+\beta=\ln(\frac{y_i}{1-y_i})$$
+So therefore we can have a least squares problem, with
+$$A=\begin{bmatrix}
+t_1 & 1\\
+t_2 & 1\\
+\vdots & \vdots\\
+t_n & 1
+\end{bmatrix}$$
+and 
+$$b=[\ln(\frac{y_1}{1-y_1}),\ln(\frac{y_2}{1-y_2}),\dots,\ln(\frac{y_n}{1-y_n})]^T$$
+and
+$$x=[\alpha,\beta]^T$$
+Then we have a least squares problem of 
+$$||Ax-b||^2$$
+
 \section*{Exercise A8.12}
 \subsection*{(a)}
 $$f(y)=||Ay-b||^2+(c^Ty-d)^2$$

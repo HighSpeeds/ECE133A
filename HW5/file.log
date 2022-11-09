@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.7)  9 NOV 2022 02:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.7)  9 NOV 2022 07:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -293,25 +293,31 @@ File: Moore's Law.png Graphic file (type png)
 <use Moore's Law.png>
 Package pdftex.def Info: Moore's Law.png  used on input line 16.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
- [2 <./Moore's Law.png>] [3]
-Overfull \hbox (23.02097pt too wide) detected at line 71
+ [2 <./Moore's Law.png>] (./problem3.jl [3])
+<fig2.png, id=30, 462.528pt x 346.896pt>
+File: fig2.png Graphic file (type png)
+<use fig2.png>
+Package pdftex.def Info: fig2.png  used on input line 50.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+ [4 <./fig2.png>] [5]
+Overfull \hbox (23.02097pt too wide) detected at line 134
 []
  []
 
-[4] [5] (./file.aux) ) 
+[6] [7] (./file.aux) ) 
 Here is how much of TeX's memory you used:
- 7793 strings out of 478238
- 121335 string characters out of 5850456
+ 7806 strings out of 478238
+ 121510 string characters out of 5850456
  418800 words of memory out of 5000000
- 25927 multiletter control sequences out of 15000+600000
+ 25936 multiletter control sequences out of 15000+600000
  482233 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,10n,82p,368b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 74i,15n,82p,368b,1579s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on file.pdf (5 pages, 214366 bytes).
+Output written on file.pdf (7 pages, 235957 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

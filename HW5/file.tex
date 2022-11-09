@@ -39,6 +39,72 @@ and
 $$x=[\alpha,\beta]^T$$
 Then we have a least squares problem of 
 $$||Ax-b||^2$$
+To find $\alpha$ and $\beta$ I used the following code:
+\lstinputlisting[
+    basicstyle=\tiny, %or \small or \footnotesize etc.
+]{problem3.jl}
+which results in
+$$\alpha=1.8676293241597044$$
+$$\beta=-3.739673238861126$$
+and the following fit:\\  
+\includegraphics[scale=0.5]{"fig2.png"}
+\section*{Exercise A5.11}
+\subsection*{(a)}
+we have that 
+\begin{align*}
+    x&=A^{\dagger}b\\
+    x&=(A^TA)^{-1}A^Tb\\
+    x&=\left(\begin{bmatrix}
+        1 & 10^{-k} & 0\\
+        1 & 0 & 10^{-k}
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 1\\
+        10^{-k} & 0\\
+        0 & 10^{-k}
+    \end{bmatrix}\right)^{-1}
+    \begin{bmatrix}
+        1 & 10^{-k} & 0\\
+        1 & 0 & 10^{-k}
+    \end{bmatrix}
+    \begin{bmatrix}
+        -10^{-k}\\
+        1+10^{-k}\\
+        1-10^{-k}
+    \end{bmatrix}\\
+    x&=\left(\begin{bmatrix}
+        1+10^{-2k} & 1\\
+        1 & 1+10^{-2k}
+    \end{bmatrix}\right)^{-1}\begin{bmatrix}
+        10^{-2k}\\
+        -10^{-2k}
+    \end{bmatrix}\\
+    x&=\begin{bmatrix}\frac{1+10^{-2k}}{10^{-4k}+2\cdot10^{-2k}}&-\frac{1}{10^{-4k}+2\cdot10^{-2k}}\\ -\frac{1}{10^{-4k}+2\cdot10^{-2k}}&\frac{1+10^{-2k}}{10^{-4k}+2\cdot10^{-2k}}
+    \end{bmatrix}\begin{bmatrix}
+        10^{-2k}\\
+        -10^{-2k}
+    \end{bmatrix}\\
+    x&=\frac{10^{-2k}}{10^{-4k}+2\cdot10^{-2k}}\begin{bmatrix}
+        1+2\cdot10^{-2k}\\
+        -1-2\cdot10^{-2k}
+    \end{bmatrix}
+\end{align*}
+thus we have for $k=6$:
+$$x=\frac{10^{-12}}{10^{-24}+2\cdot10^{-12}}\begin{bmatrix}
+    1+2\cdot10^{-12}\\
+    -1-2\cdot10^{-12}
+\end{bmatrix}$$
+And for $k=7$ we have
+$$x=\frac{10^{-14}}{10^{-28}+2\cdot10^{-14}}\begin{bmatrix}
+    1+2\cdot10^{-14}\\
+    -1-2\cdot10^{-14}
+\end{bmatrix}$$
+And for $k=8$ we have
+$$x=\frac{10^{-16}}{10^{-32}+2\cdot10^{-16}}\begin{bmatrix}
+    1+2\cdot10^{-16}\\
+    -1-2\cdot10^{-16}
+\end{bmatrix}$$
+\subsection*{(b)}
 
 \section*{Exercise A8.12}
 \subsection*{(a)}

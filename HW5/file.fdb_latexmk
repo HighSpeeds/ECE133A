@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1667991220 "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" "file.pdf" "file" 1667991221
+["pdflatex"] 1668007370 "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" "file.pdf" "file" 1668007370
   "../preamble.tex" 1664665325 575 5791e705ff366eb94d680dff3f2fe48a ""
-  "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" 1667991220 2995 c2b33953f99547385d4610499294fd3f ""
+  "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" 1668007369 4741 e07cd9065769c8e576996090e3b1a60f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1650183167 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -95,9 +95,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1667843082 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1667843073 2927660 93a61f5ad9033d43a5151947b7738394 ""
   "Moore's Law.png" 1667907594 23460 eee73b534234ed84695a668668ed20df ""
-  "file.aux" 1667991221 119 ea7661f52d2fad7a73fe09a586f3be1b "pdflatex"
-  "file.tex" 1667991220 2995 c2b33953f99547385d4610499294fd3f ""
+  "fig2.png" 1667999841 22375 9edd494e3caa05b558b1b3b4885eb56c ""
+  "file.aux" 1668007370 206 a3819e72bfbf9824a56f10eb9c42d2c5 "pdflatex"
+  "file.tex" 1668007369 4741 e07cd9065769c8e576996090e3b1a60f ""
   "problem1.jl" 1667907594 561 6bfc008b43b62c038142e451a0064c4e ""
+  "problem3.jl" 1667999828 448 e26f882bc46c4889d71c075feea28b12 ""
   (generated)
   "file.aux"
   "file.log"

@@ -8,14 +8,15 @@ A[:,1]=t
 b=log.(y./(ones(length(t)).-y))
 
 x=A\b
-println(x)
-println(x[1].*t)
-println(x[2])
-t1=LinRange(0,5,50)
-y1=exp.(x[2].+(x[1].*t))./(1+exp.(x[2].+(x[1]*t)))
-
+# println(x)
+# println(x[1].*t)
+# println(x[2])
+t1=LinRange(-1,5,50)
+y1=exp.(x[2].+(x[1].*t1))./(ones(length(t1)).+exp.(x[2].+(x[1]*t1)))
+println("alpha=",x[1])
+println("beta=",x[2])
 plot(t,y,"o",label="data")
-plot(t,y1,label="fit")
+plot(t1,y1,label="fit")
 xlabel("t")
 ylabel("y")
 title("Logistic Fit")

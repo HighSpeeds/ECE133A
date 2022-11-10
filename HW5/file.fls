@@ -512,12 +512,12 @@ INPUT ./Moore's Law.png
 INPUT Moore's Law.png
 INPUT ./Moore's Law.png
 INPUT ./Moore's Law.png
-INPUT ./problem2.py
-INPUT problem2.py
-INPUT ./problem2.py
-INPUT problem2.py
-INPUT ./problem2.py
-INPUT problem2.py
+INPUT ./problem2.jl
+INPUT problem2.jl
+INPUT ./problem2.jl
+INPUT problem2.jl
+INPUT ./problem2.jl
+INPUT problem2.jl
 INPUT ./fig1.png
 INPUT ./fig1.png
 INPUT fig1.png

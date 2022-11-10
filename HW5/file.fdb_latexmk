@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1668081025 "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" "file.pdf" "file" 1668081025
+["pdflatex"] 1668081145 "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" "file.pdf" "file" 1668081145
   "../preamble.tex" 1664665325 575 5791e705ff366eb94d680dff3f2fe48a ""
-  "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" 1668081001 7308 e64625e5f0b77b02acb6737b32c192ba ""
+  "/home/lawrence/Desktop/UCLA/ECE133A/HW5/file.tex" 1668081144 7308 81ef35d08fa7d4c86f5d264243dd4333 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1650183167 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1650183167 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -104,8 +104,8 @@
   "Moore's Law.png" 1667907594 23460 eee73b534234ed84695a668668ed20df ""
   "fig1.png" 1668080951 35219 c629e5e456e3b02eda26af05044b493d ""
   "fig2.png" 1667999841 22375 9edd494e3caa05b558b1b3b4885eb56c ""
-  "file.aux" 1668081025 294 e7f4890bb3f0e9fb17c6701ea5ca5535 "pdflatex"
-  "file.tex" 1668081001 7308 e64625e5f0b77b02acb6737b32c192ba ""
+  "file.aux" 1668081145 294 e7f4890bb3f0e9fb17c6701ea5ca5535 "pdflatex"
+  "file.tex" 1668081144 7308 81ef35d08fa7d4c86f5d264243dd4333 ""
   "problem1.jl" 1667907594 561 6bfc008b43b62c038142e451a0064c4e ""
   "problem2.jl" 1668081025 1094 c14da61e71b626e124b5329ec33ed736 ""
   "problem3.jl" 1667999828 448 e26f882bc46c4889d71c075feea28b12 ""

@@ -27,10 +27,10 @@ Let $p_{ik}=[u_{ik},v_{ik}]$ then we have that
 $$||p_{i_{1}}-p{j_{1}}||^2+\cdots+||p_{i_{L}}-p_{j_{L}}||^2=(u_{i_{1}}-u_{j_{1}})^2+\cdots+(u_{i_{L}}-u_{j_{L}})^2+(v_{i_{1}}-v_{j_{1}})^2+\cdots+(v_{i_{L}}-v_{j_{L}})^2$$
 $$||p_{i_{1}}-p{j_{1}}||^2+\cdots+||p_{i_{L}}-p_{j_{L}}||^2=D(u)+D(v)$$
 \subsection*{(b)}
-we have that we want to minimize
-$$||B^Tu||^2+||B^Tv||^2$$
-Letting the matrix made up of the of the first $N-K$ rows of $B$
-be the matrix $A$ and the last $K$ rows of $B$, likewise let
+Let C be the incident matrix of the graph we have that we want to minimize
+$$||C^Tu||^2+||C^Tv||^2$$
+Letting the matrix made up of the of the first $N-K$ rows of $C$
+be the matrix $A$ and the last $K$ rows of $C$, likewise let
 $u_{1}$ and $v_{1}$ be the first $N-K$ rows of $u$ and $v$ and
 $u_{2}$ and $v_{2}$ be the last $K$ rows of $u$ and $v$ respectively, then we have
 \begin{align*}
@@ -63,7 +63,12 @@ $$x=\begin{bmatrix}
     v_{1}
 \end{bmatrix}$$
 \subsection*{(c)}
-
+With the following code in python:
+\lstinputlisting[
+    basicstyle=\tiny, %or \small or \footnotesize etc.
+]{problem2.py}
+We get the following plot:\\
+\includegraphics[scale=0.5]{fig1.png}
 \section*{Exercise A8.3}
 We can get that 
 $$\alpha t_i+\beta=\ln(\frac{y_i}{1-y_i})$$

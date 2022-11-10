@@ -23,6 +23,47 @@ This is in line with Moore's law since
 $2\theta_2=0.30803635968$ which is close to $\log_{10}(2)=0.30102999566$
 \section*{Exercise T12.12}
 \subsection*{(a)}
+Let $p_{ik}=[u_{ik},v_{ik}]$ then we have that 
+$$||p_{i_{1}}-p{j_{1}}||^2+\cdots+||p_{i_{L}}-p_{j_{L}}||^2=(u_{i_{1}}-u_{j_{1}})^2+\cdots+(u_{i_{L}}-u_{j_{L}})^2+(v_{i_{1}}-v_{j_{1}})^2+\cdots+(v_{i_{L}}-v_{j_{L}})^2$$
+$$||p_{i_{1}}-p{j_{1}}||^2+\cdots+||p_{i_{L}}-p_{j_{L}}||^2=D(u)+D(v)$$
+\subsection*{(b)}
+we have that we want to minimize
+$$||B^Tu||^2+||B^Tv||^2$$
+Letting the matrix made up of the of the first $N-K$ rows of $B$
+be the matrix $A$ and the last $K$ rows of $B$, likewise let
+$u_{1}$ and $v_{1}$ be the first $N-K$ rows of $u$ and $v$ and
+$u_{2}$ and $v_{2}$ be the last $K$ rows of $u$ and $v$ respectively, then we have
+\begin{align*}
+||B^Tu||^2+||B^Tv||^2&=||A^Tu_{1}+B^Tu_{2}||^2+||A^Tv_{1}+B^Tv_{2}||^2\\
+&=\left|\left|\begin{bmatrix}
+    A^T & 0\\
+    0 & A^T
+\end{bmatrix}\begin{bmatrix}
+    u_{1}\\
+    v_{1}
+\end{bmatrix}+\begin{bmatrix}
+    B^Tu_{2}\\
+    B^Tv_{2}
+\end{bmatrix}\right|\right|^2
+\end{align*}
+So then we have that in term of a least square problem we have
+$||Ax-b||^2$
+$$A=\begin{bmatrix}
+    A^T & 0\\
+    0 & A^T
+\end{bmatrix}$$
+And
+$$b=\begin{bmatrix}
+    B^Tu_{2}\\
+    B^Tv_{2}
+\end{bmatrix}$$
+And
+$$x=\begin{bmatrix}
+    u_{1}\\
+    v_{1}
+\end{bmatrix}$$
+\subsection*{(c)}
+
 \section*{Exercise A8.3}
 We can get that 
 $$\alpha t_i+\beta=\ln(\frac{y_i}{1-y_i})$$
@@ -85,28 +126,75 @@ we have that
         -10^{-2k}
     \end{bmatrix}\\
     x&=\frac{10^{-2k}}{10^{-4k}+2\cdot10^{-2k}}\begin{bmatrix}
-        1+2\cdot10^{-2k}\\
-        -1-2\cdot10^{-2k}
+        2+10^{-2k}\\
+        -2-10^{-2k}
     \end{bmatrix}
 \end{align*}
 thus we have for $k=6$:
 $$x=\frac{10^{-12}}{10^{-24}+2\cdot10^{-12}}\begin{bmatrix}
-    1+2\cdot10^{-12}\\
-    -1-2\cdot10^{-12}
+    2+10^{-12}\\
+    -2-10^{-12}
 \end{bmatrix}$$
 And for $k=7$ we have
 $$x=\frac{10^{-14}}{10^{-28}+2\cdot10^{-14}}\begin{bmatrix}
-    1+2\cdot10^{-14}\\
-    -1-2\cdot10^{-14}
+    2+10^{-14}\\
+    -2-10^{-14}
 \end{bmatrix}$$
 And for $k=8$ we have
 $$x=\frac{10^{-16}}{10^{-32}+2\cdot10^{-16}}\begin{bmatrix}
-    1+2\cdot10^{-16}\\
-    -1-2\cdot10^{-16}
+    2+10^{-16}\\
+    -2-10^{-16}
 \end{bmatrix}$$
 \subsection*{(b)}
+We have that with the following code:
+\begin{lstlisting}
+for k = [6,7,8]
 
-\section*{Exercise A8.12}
+    A=transpose([[1,1] [10.0^-k,0] [0,10.0^-k]])
+    b=[-(10.0^-k),1+10.0^-k, 1-10.0^-k]
+    println("k=",k)
+    println("x=",A\b)
+    println("---------------------")
+end
+\end{lstlisting}
+we get that 
+\begin{verbatim}
+k=6     
+x=[0.9999999999176988, -0.999999999917699]
+---------------------
+k=7
+x=[1.0000000027436178, -1.0000000027436176]
+---------------------
+k=8
+x=[1.0000000043137076, -1.0000000043137076]
+---------------------
+\end{verbatim}
+\subsection*{(c)}
+We have that with the following code:
+\begin{lstlisting}
+for k = [6,7,8]
+
+    A=transpose([[1,1] [10.0^-k,0] [0,10.0^-k]])
+    b=[-(10.0^-k),1+10.0^-k, 1-10.0^-k]
+    println("k=",k)
+    println("x=",(A'*A) \ (A'*b))
+    println("---------------------")
+end
+\end{lstlisting}
+we get that
+\begin{verbatim}
+k=7
+x=[1.0000000027436178, -1.0000000027436176]
+---------------------
+k=8
+x=[1.0000000043137076, -1.0000000043137076]
+---------------------
+\end{verbatim}
+And for $k=8$ we get a singular exception error since \verb +A'*A+ 
+gets rounded to a matrix $\begin{bmatrix}
+    1 & 1\\
+    1 & 1
+\end{bmatrix}$ that is singular
 \subsection*{(a)}
 $$f(y)=||Ay-b||^2+(c^Ty-d)^2$$
 To minimize we take the derivative of it with respect to $y_i$ for all

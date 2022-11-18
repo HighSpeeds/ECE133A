@@ -1,0 +1,112 @@
+\include{"../preamble.tex"}
+\title{ECE 133A HW 6}
+\begin{document}
+\maketitle
+\section*{Exercise A10.1}
+\subsection*{(a)}
+Let $u=[u(0),u(1),\cdots,u(N-1)]^T$, then we have that $x=u$
+we want to minimize the energy or 
+$$||u||^2$$
+Furthermore we can express 
+$$s_1(N)=0.1u(N-2)+(0.95+1)\cdot 0.1 u(N-3)+(0.95^2+0.95+1)\cdot 0.1 u(N-4)+\cdots+(\sum_{i=0}^{N-2}0.95^i)\cdot 0.1 u(0)$$
+$$s_2(N)=0.1u(N-1)+(0.95)\cdot 0.1 u(N-2)+(0.95^2)\cdot 0.1 u(N-3)+\cdots+(0.95^{N-1})\cdot 0.1 u(0)$$
+So therefore we have that 
+$$C=\begin{bmatrix}
+    0.1\sum_{i=0}^{N-2}0.95^i & \cdots & 0.1(0.95+1) & 0.1 & 0\\
+    0.1(0.95^{N-1}) & \cdots & 0.1(0.95^2) &  0.1(0.95) & 0.1
+\end{bmatrix}$$
+And
+$$d=\begin{bmatrix}
+    10\\
+    0
+\end{bmatrix}$$
+\subsection*{(b)}
+\begin{verbatim}
+using PyPlot
+
+function create_C(N)
+    C = zeros(2,N)
+
+    #make the first row of C 
+    for i=1:N-1
+        for j=1:N-i
+            C[1,i]+=0.1*(0.95^(j-1))
+        end
+    end
+    # C[1,N-1]=0.1 
+
+    #make the second row of C 
+    for i=1:N
+        C[2,i] = 0.1*(0.95^(N-i))
+    end
+    return C
+end
+
+# calculate u
+N=30
+C = create_C(N)
+d=[10,0]
+u = C\d
+s1=zeros(N+1)
+s2=zeros(N+1)
+for i=1:N
+    s1[i+1]=s1[i]+s2[i]
+    s2[i+1]=0.95*s2[i]+0.1*u[i]
+end
+
+fig,axs=subplots(3,1,figsize=(10,12))
+axs[1].plot(s1)
+axs[1][:set_title]("s1")
+axs[2][:plot](s2)
+axs[2][:set_title]("s2")
+axs[3][:plot](u)
+axs[3][:set_title]("u")
+axs[3][:set_xlabel]("time")
+
+savefig("problem2a.png")
+close()
+\end{verbatim}
+We get the following plot\\
+\includegraphics*[scale=0.4]{problem2a.png}
+\subsection*{(c)}
+With the following code:
+\begin{verbatim}
+using PyPlot
+
+function create_C(N)
+    C = zeros(2,N)
+
+    #make the first row of C 
+    for i=1:N-1
+        for j=1:N-i
+            C[1,i]+=0.1*(0.95^(j-1))
+        end
+    end
+    # C[1,N-1]=0.1 
+
+    #make the second row of C 
+    for i=1:N
+        C[2,i] = 0.1*(0.95^(N-i))
+    end
+    return C
+end
+
+N=2:29
+println(N)
+E=zeros(length(N))
+for i=1:length(N)
+    C = create_C(N[i])
+    d=[10,0]
+    u = C\d
+    E[i]=sum(u.^2)
+end
+plot(N,E)
+xlabel("N")
+ylabel("E")
+yscale("log")
+savefig("problem2b.png")
+close()
+\end{verbatim}
+We get the following plot\\
+\includegraphics*[scale=0.7]{problem2b.png}
+\end{document}

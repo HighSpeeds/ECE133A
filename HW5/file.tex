@@ -235,7 +235,7 @@ we can solve in $2n^2$ flops. then computing $c^T\hat{x}$ and $c^T(A^TA)^{-1}c$ 
 each cost us an additional $2n-1$ flops, then computing $\frac{d-c^T\hat{x}}{1+c^T(A^TA)^{-1}c}$ will 
 cost us 3 flops.Then computing $\hat{x}+\frac{d-c^T\hat{x}}{1+c^T(A^TA)^{-1}c}(A^TA)^{-1}c$
 will cost us $2n$ flops, so in total this algorithm will cost us 
-$\boxed{2mn^2+2mn+3n^2+6n-1}$ flops.
+$\boxed{2mn^2+2mn+3n^2+6n+1}$ flops.
 
 
 

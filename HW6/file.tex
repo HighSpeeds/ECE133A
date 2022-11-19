@@ -9,19 +9,19 @@ We have that since $W$ is symmetric, $\tilde{W}$ is symmetric. and thus we have 
 $$A^T=\frac{1}{n^2}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^H$$
 And the same for $D_v^T$ and $D_h^T$. Thus we have that
 Thus we get that 
-$$A^TA=\tilde{W}\left(\textbf{diag}(\tilde{W}b)\right)^2\tilde{W}^Hx$$
+$$A^TA=\frac{1}{n^2}\tilde{W}\left(\textbf{diag}(\tilde{W}b)\right)^2\tilde{W}^Hx$$
 And likewise for $D_v^TD_v$ and $D_h^TD_h$. Thus we have that
 $$(A^TA+\lambda D^T_vD_v+\lambda D^T_hD_h)x=A^Ty$$
 becomes:
 \begin{align*}
-    \tilde{W}\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
+    \frac{1}{n^2}\tilde{W}\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
             +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)\tilde{W}^Hx
             &=\frac{1}{n^2}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy\\
-            \left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
+            \frac{1}{n^2}\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
             +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)\tilde{W}^Hx
             &=\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy
 \end{align*}
-let $z=\tilde{W}^Hx$ Then we get
+let $z=\frac{1}{n^2}\tilde{W}^Hx$ Then we get
 $$\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
             +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)z
             =\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$$
@@ -36,11 +36,10 @@ $z$ by dividing $\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$
 by $\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2
 +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)$
 element wise which will cost us $n$ flops. Then we can solve for $x$ by 
-just multiplying $z$ with $\frac{1}{n^2}\tilde{W}$ 
-or in other words, dong the FFT on $z$ and then multiplying each
-value by $\frac{1}{n^2}$, which will cost us $n^2\log(n)+n+1$ flops. 
+just multiplying $z$ with $\tilde{W}$ 
+or in other words, dong the FFT on $z$, which will cost us $n^2\log(n)$ flops. 
 Therefore in total our algorithm will cost us 
-$5n^2\log(n)+10n+1$ flops.
+$5n^2\log(n)+9n$ flops.
 
 \section*{Exercise A10.1}
 \subsection*{(a)}

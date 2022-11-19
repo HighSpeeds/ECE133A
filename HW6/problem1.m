@@ -24,11 +24,14 @@ function x=deblur(Y,B,lambda)
     ifft_y=reshape( ifft2( reshape( y, n, n ) ), n^2, 1);
 
     z=(fft_b.*ifft_y)./(fft_b.^2+lambda*(fft_e.^2+fft_f.^2));
-    x=reshape( ifft2( reshape( z, n, n ) ), n^2, 1)*n^2;
+    x=reshape( fft2( reshape( z, n, n ) ), n^2, 1);
 end
 
-lambda=0.01;
+lambda=1e-4;
 x=deblur(Y,B,lambda);
-imshow(reshape(x,size(B)[1],size(B)[2]),[])
+imshow(reshape(x,1024,1024),[]);
 print -dpng deblur.png
+
+imshow(Y,[]);
+print -dpng blurred.png
 

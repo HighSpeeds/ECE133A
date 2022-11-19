@@ -109,4 +109,38 @@ close()
 \end{verbatim}
 We get the following plot\\
 \includegraphics*[scale=0.7]{problem2b.png}
+\section*{Exercise A10.9}
+\subsection*{(a)}
+We use Langrage multipliers to solve this problem.\\
+$$L(x)=||Ax-b||^2+\lambda e_i^T x$$
+\begin{align*}
+    \nabla L(x)&=0\\
+    2A^T(Ax-b)+\lambda e_i&=0\\
+    2A^TAx&=2A^Tb-\lambda e_i\\
+    A^TAx&=A^Tb-\frac{\lambda}{2} e_i\\
+    x&=(A^TA)^{-1}A^Tb-\frac{\lambda}{2}(A^TA)^{-1}e_i\\
+    x&=\hat{x}-\frac{\lambda}{2}(A^TA)^{-1}e_i
+\end{align*}
+subsituting this back into the constraint we get
+\begin{align*}
+    e_i^T x&=0\\
+    e_i^T\left(\hat{x}-\frac{\lambda}{2}(A^TA)^{-1}e_i\right)&=0\\
+    \hat{x}_i-\frac{\lambda}{2}(A^TA)^{-1}_{ii}&=0\\
+    \hat{x}_i&=\frac{\lambda}{2}(A^TA)^{-1}_{ii}
+    \lambda=\frac{2\hat{x}_i}{(A^TA)^{-1}_{ii}}
+\end{align*}
+And thus we get that
+$$x=\hat{x}-\frac{\hat{x}_i}{(A^TA)^{-1}_{ii}}(A^TA)^{-1}e_i$$
+\subsection*{(b)}
+Calculating the QR factorization of A costs $2mn^2$ flops. 
+And solving $\hat{x}$ costs an additional $2mn+n^2$ flops.
+Then we can solve for $(A^TA)^{-1}e_i$ using 
+backwards and forwards substitution which costs $2n^2$ flops, and 
+then finding $(A^TA)^{-1}_{ii}$ is just finding the value
+for the ith index in the vector $(A^TA)^{-1}e_i$ which costs $0$ flops.
+This is the same for $\hat{x}_i$. Then calculating 
+$\frac{\hat{x}_i}{(A^TA)^{-1}_{ii}}$ costs $1$ flops, and then multiplying
+that to every value of $(A^TA)^{-1}e_i$ costs $n$ flops. And then subtracting the resulting
+vector from $\hat{x}$ will cost $n$ flops. So the total cost is
+$\boxed{2mn^2+2mn+3n^2+2n+1}$ flops.
 \end{document}

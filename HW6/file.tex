@@ -2,6 +2,46 @@
 \title{ECE 133A HW 6}
 \begin{document}
 \maketitle
+\section*{Exercise A9.4}
+Since $A=T(B)$, $D_v=T(E)$, and $D_h=T(E^T)$, and letting
+$b$, $e$, and $f$ being the column major ordering of $B$, $E$ and  
+We have that since $W$ is symmetric, $\tilde{W}$ is symmetric. and thus we have that 
+$$A^T=\frac{1}{n^2}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^H$$
+And the same for $D_v^T$ and $D_h^T$. Thus we have that
+Thus we get that 
+$$A^TA=\tilde{W}\left(\textbf{diag}(\tilde{W}b)\right)^2\tilde{W}^Hx$$
+And likewise for $D_v^TD_v$ and $D_h^TD_h$. Thus we have that
+$$(A^TA+\lambda D^T_vD_v+\lambda D^T_hD_h)x=A^Ty$$
+becomes:
+\begin{align*}
+    \tilde{W}\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
+            +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)\tilde{W}^Hx
+            &=\frac{1}{n^2}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy\\
+            \left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
+            +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)\tilde{W}^Hx
+            &=\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy
+\end{align*}
+let $z=\tilde{W}^Hx$ Then we get
+$$\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
+            +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)z
+            =\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$$
+Then solving for $\tilde{W}b$, $\tilde{W}e$, and $\tilde{W}f$ and $\frac{1}{n^2}\tilde{W}^Hy$ 
+will cost $n^2\log(n)$ flops each, and then solving for 
+$\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
++\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)$ will cost 
+us $7n$ flops. Likewise solving for $\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$
+is just element wise multiplication of $\frac{1}{n^2}\tilde{W}^Hy$ and 
+$\tilde{W}b$ which is $n$ flops. Then we can solve for 
+$z$ by dividing $\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$
+by $\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2
++\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)$
+element wise which will cost us $n$ flops. Then we can solve for $x$ by 
+just multiplying $z$ with $\frac{1}{n^2}\tilde{W}$ 
+or in other words, dong the FFT on $z$ and then multiplying each
+value by $\frac{1}{n^2}$, which will cost us $n^2\log(n)+n+1$ flops. 
+Therefore in total our algorithm will cost us 
+$5n^2\log(n)+10n+1$ flops.
+
 \section*{Exercise A10.1}
 \subsection*{(a)}
 Let $u=[u(0),u(1),\cdots,u(N-1)]^T$, then we have that $x=u$

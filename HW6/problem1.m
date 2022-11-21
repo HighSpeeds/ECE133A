@@ -23,11 +23,12 @@ function x=deblur(Y,B,lambda)
     fft_f=reshape( fft2( reshape( f, n, n ) ), n^2, 1);
     ifft_y=reshape( ifft2( reshape( y, n, n ) ), n^2, 1);
 
-    z=(fft_b.*ifft_y)./(fft_b.^2+lambda*(fft_e.^2+fft_f.^2));
+    z=(fft_b.*ifft_y)./(fft_b.*conj(fft_b)+lambda*(fft_e.*conj(fft_e)+fft_f.*conj(fft_f)));
     x=reshape( fft2( reshape( z, n, n ) ), n^2, 1);
 end
 
-lambda=1e-4;
+
+lambda=100;
 x=deblur(Y,B,lambda);
 imshow(reshape(x,1024,1024),[]);
 print -dpng deblur.png

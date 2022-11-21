@@ -8,6 +8,11 @@ $b$, $e$, and $f$ being the column major ordering of $B$, $E$ and
 We have that since $W$ is symmetric, $\tilde{W}$ is symmetric. and thus we have that 
 $$A^T=\frac{1}{n^2}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^H$$
 And the same for $D_v^T$ and $D_h^T$. Thus we have that
+\begin{align*}
+    A^TA&=\frac{1}{n^4}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^H\tilde{W}^H\textbf{diag}(\tilde{W}b)\tilde{H}x\\
+    &=\frac{1}{n^4}\tilde{W}\left(\left(\tilde{W}b\right)\left(\tilde{W}b\right)^T\right)\left(\tilde{W}^H\tilde{W}\right)
+\end{align*}
+
 Thus we get that 
 $$A^TA=\frac{1}{n^2}\tilde{W}\left(\textbf{diag}(\tilde{W}b)\right)^2\tilde{W}^Hx$$
 And likewise for $D_v^TD_v$ and $D_h^TD_h$. Thus we have that

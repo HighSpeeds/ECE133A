@@ -27,12 +27,25 @@ function x=deblur(Y,B,lambda)
     x=reshape( fft2( reshape( z, n, n ) ), n^2, 1);
 end
 
-
-lambda=100;
-x=deblur(Y,B,lambda);
-imshow(reshape(x,1024,1024),[]);
-print -dpng deblur.png
-
-imshow(Y,[]);
-print -dpng blurred.png
+gcf=figure;
+Lambdas=10.^(-6:-2);
+x0=10;
+y0=10;
+width=500*2;
+height=500*(length(Lambdas)+1)/2;
+set(gcf,'position',[x0,y0,width,height])
+subplot((length(Lambdas)+1)/2,2,1)
+imshow(Y,[])
+title('Original Image');
+hold on
+for i=1:length(Lambdas)
+    i
+    subplot((length(Lambdas)+1)/2,2,i+1);
+    lambda=Lambdas(i)
+    x=deblur(Y,B,lambda);
+    imshow(reshape(x,1024,1024),[]);
+    title(sprintf('lambda=%f',lambda));
+end
+print -dpng problem1.png
+hold off
 

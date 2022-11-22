@@ -5,47 +5,101 @@
 \section*{Exercise A9.4}
 Since $A=T(B)$, $D_v=T(E)$, and $D_h=T(E^T)$, and letting
 $b$, $e$, and $f$ being the column major ordering of $B$, $E$ and  
-We have that since $W$ is symmetric, $\tilde{W}$ is symmetric. and thus we have that 
-$$A^T=\frac{1}{n^2}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^H$$
-And the same for $D_v^T$ and $D_h^T$. Thus we have that
-\begin{align*}
-    A^TA&=\frac{1}{n^4}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^H\tilde{W}^H\textbf{diag}(\tilde{W}b)\tilde{H}x\\
-    &=\frac{1}{n^4}\tilde{W}\left(\left(\tilde{W}b\right)\left(\tilde{W}b\right)^T\right)\left(\tilde{W}^H\tilde{W}\right)
-\end{align*}
-
-Thus we get that 
-$$A^TA=\frac{1}{n^2}\tilde{W}\left(\textbf{diag}(\tilde{W}b)\right)^2\tilde{W}^Hx$$
+We have that $A$, $D_v$, and $D_h$ are all real matrices.  Thus,
+we have
+$$A^T=A^H=\frac{1}{n^2}\tilde{W}\textbf{diag}(\overline{\tilde{W}b})\tilde{W}^H$$
+Where $\circ$ denotes element wise multiplication, the same can be done for $D_v^T$ and $D_h^T$. Thus we have that
+$$A^TA=\frac{1}{n^2}\tilde{W}\textbf{diag}\left(\tilde{W}b\circ\overline{\tilde{W}b}\right)\tilde{W}^Hx$$
 And likewise for $D_v^TD_v$ and $D_h^TD_h$. Thus we have that
 $$(A^TA+\lambda D^T_vD_v+\lambda D^T_hD_h)x=A^Ty$$
 becomes:
 \begin{align*}
-    \frac{1}{n^2}\tilde{W}\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
-            +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)\tilde{W}^Hx
+    \frac{1}{n^2}\tilde{W}\left(\textbf{diag}\left(\tilde{W}b\circ\overline{\tilde{W}b}\right) +\lambda \textbf{diag}\left(\tilde{W}e\circ\overline{\tilde{W}e}\right) 
+            +\lambda \textbf{diag}\left(\tilde{W}f\circ\overline{\tilde{W}f}\right)\right)\tilde{W}^Hx
             &=\frac{1}{n^2}\tilde{W}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy\\
-            \frac{1}{n^2}\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
-            +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)\tilde{W}^Hx
+            \frac{1}{n^2}\left(\textbf{diag}\left(\tilde{W}b\circ\overline{\tilde{W}b}\right) +\lambda \textbf{diag}\left(\tilde{W}e\circ\overline{\tilde{W}e}\right) 
+            +\lambda \textbf{diag}\left(\tilde{W}f\circ\overline{\tilde{W}f}\right)\right)\tilde{W}^Hx
             &=\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy
 \end{align*}
 let $z=\frac{1}{n^2}\tilde{W}^Hx$ Then we get
-$$\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
-            +\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)z
+$$\left(\textbf{diag}\left(\tilde{W}b\circ\overline{\tilde{W}b}\right) +\lambda \textbf{diag}\left(\tilde{W}e\circ\overline{\tilde{W}e}\right) 
+            +\lambda \textbf{diag}\left(\tilde{W}f\circ\overline{\tilde{W}f}\right)\right)z
             =\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$$
 Then solving for $\tilde{W}b$, $\tilde{W}e$, and $\tilde{W}f$ and $\frac{1}{n^2}\tilde{W}^Hy$ 
 will cost $n^2\log(n)$ flops each, and then solving for 
-$\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2 
-+\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)$ will cost 
-us $7n$ flops. Likewise solving for $\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$
+$\left(\textbf{diag}\left(\tilde{W}b\circ\overline{\tilde{W}b}\right) +\lambda \textbf{diag}\left(\tilde{W}e\circ\overline{\tilde{W}e}\right) 
++\lambda \textbf{diag}\left(\tilde{W}f\circ\overline{\tilde{W}f}\right)\right)$ will cost 
+us $10n$ flops. Likewise solving for $\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$
 is just element wise multiplication of $\frac{1}{n^2}\tilde{W}^Hy$ and 
-$\tilde{W}b$ which is $n$ flops. Then we can solve for 
+$\tilde{W}b$ which is $n^2$ flops. Then we can solve for 
 $z$ by dividing $\frac{1}{n^2}\textbf{diag}(\tilde{W}b)\tilde{W}^Hy$
-by $\left(\left(\textbf{diag}(\tilde{W}b)\right)^2 +\lambda \left(\textbf{diag}(\tilde{W}e)\right)^2
-+\lambda \left(\textbf{diag}(\tilde{W}f)\right)^2\right)$
-element wise which will cost us $n$ flops. Then we can solve for $x$ by 
+by $\left(\textbf{diag}\left(\tilde{W}b\circ\overline{\tilde{W}b}\right) +\lambda \textbf{diag}\left(\tilde{W}e\circ\overline{\tilde{W}e}\right)
++\lambda \textbf{diag}\left(\tilde{W}f\circ\overline{\tilde{W}f}\right)\right)$
+element wise which will cost us $n^2$ flops. Then we can solve for $x$ by 
 just multiplying $z$ with $\tilde{W}$ 
 or in other words, dong the FFT on $z$, which will cost us $n^2\log(n)$ flops. 
 Therefore in total our algorithm will cost us 
-$5n^2\log(n)+9n$ flops.
+$5n^2\log(n)+12n^2$ flops. This can be implemented with the 
+following algorithm
+\begin{verbatim}
+function x=deblur(Y,B,lambda)
+    %convert Y to column major order
+    y = Y(:);
+    %convert B to column major order
+    b = B(:);
+    %make the E matrix where all values are 0 except for 
+    %the top left bottom left values
+    %which are 1 and -1 respectively
+    E=zeros(size(B));
+    E(1,1)=1;
+    E(end,1)=-1;
+    %convert E to column major order
+    e = E(:);
+    %convert the transpose of E to column major order
+    f = E'(:);
+    
+    n=size(B,1);
 
+    fft_b=reshape( fft2( reshape( b, n, n ) ), n^2, 1);
+    fft_e=reshape( fft2( reshape( e, n, n ) ), n^2, 1);
+    fft_f=reshape( fft2( reshape( f, n, n ) ), n^2, 1);
+    ifft_y=reshape( ifft2( reshape( y, n, n ) ), n^2, 1);
+
+    z=(fft_b.*ifft_y)./(fft_b.*conj(fft_b)+
+            lambda*(fft_e.*conj(fft_e)+fft_f.*conj(fft_f)));
+    x=reshape( fft2( reshape( z, n, n ) ), n^2, 1);
+end
+\end{verbatim}
+\subsection*{(b)}
+With the function above and the code below, I generated the following
+deblurred images for different values of $\lambda$.
+\begin{verbatim}
+load HW6/deblur.mat
+gcf=figure;
+Lambdas=10.^(-6:-2);
+x0=10;
+y0=10;
+width=500*2;
+height=500*(length(Lambdas)+1)/2;
+set(gcf,'position',[x0,y0,width,height])
+subplot((length(Lambdas)+1)/2,2,1)
+imshow(Y,[])
+title('Original Image');
+hold on
+for i=1:length(Lambdas)
+    i
+    subplot((length(Lambdas)+1)/2,2,i+1);
+    lambda=Lambdas(i)
+    x=deblur(Y,B,lambda);
+    imshow(reshape(x,1024,1024),[]);
+    title(sprintf('lambda=%f',lambda));
+end
+print -dpng problem1.png
+hold off
+\end{verbatim}
+To get the following images\\
+\includegraphics[scale=0.25]{problem1.png}\\
+Visually it seems like $\lambda =10^{-3}$ produces the best debluring.
 \section*{Exercise A10.1}
 \subsection*{(a)}
 Let $u=[u(0),u(1),\cdots,u(N-1)]^T$, then we have that $x=u$

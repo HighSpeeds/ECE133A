@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.25)  20 NOV 2022 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.25)  21 NOV 2022 16:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -299,67 +299,115 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (67.82668pt too wide) detected at line 28
+Overfull \hbox (114.51552pt too wide) detected at line 23
 []
+ []
+
+
+Overfull \hbox (51.39435pt too wide) detected at line 27
+[] \OML/cmm/m/it/12 z \OT1/cmr/m/n/12 = [][]([]\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 y
+ []
+
+
+Overfull \hbox (36.90677pt too wide) in paragraph at lines 27--44
+\T1/cmr/m/n/12 and then solv-ing for $[]$
+ []
+
+
+Overfull \hbox (110.44235pt too wide) in paragraph at lines 27--44
+\OML/cmm/m/it/12 z$ \T1/cmr/m/n/12 by di-vid-ing $[][]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 y$ \T1/cmr/m/n/12 by $[]$
  []
 
 [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (4.7055pt too wide) detected at line 32
-[] \OML/cmm/m/it/12 z \OT1/cmr/m/n/12 = [][]([]\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 y
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 44.
+ (c:/texlive/2022/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+Overfull \hbox (14.54395pt too wide) in paragraph at lines 72--72
+[]    \T1/fvm/m/n/12 %make the E matrix where all values are 0 except for[] 
  []
 
 
-Overfull \hbox (63.75351pt too wide) in paragraph at lines 32--48
-\OML/cmm/m/it/12 z$ \T1/cmr/m/n/12 by di-vid-ing $[][]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 y$ \T1/cmr/m/n/12 by $[]$
+Overfull \hbox (7.31995pt too wide) in paragraph at lines 72--72
+[]    \T1/fvm/m/n/12 fft_b=reshape( fft2( reshape( b, n, n ) ), n^2, 1);[] 
  []
 
 
-Overfull \hbox (102.03476pt too wide) detected at line 55
+Overfull \hbox (7.31995pt too wide) in paragraph at lines 72--72
+[]    \T1/fvm/m/n/12 fft_e=reshape( fft2( reshape( e, n, n ) ), n^2, 1);[] 
+ []
+
+
+Overfull \hbox (7.31995pt too wide) in paragraph at lines 72--72
+[]    \T1/fvm/m/n/12 fft_f=reshape( fft2( reshape( f, n, n ) ), n^2, 1);[] 
+ []
+
+
+Overfull \hbox (21.76794pt too wide) in paragraph at lines 72--72
+[]    \T1/fvm/m/n/12 ifft_y=reshape( ifft2( reshape( y, n, n ) ), n^2, 1);[] 
+ []
+
+[2]
+Overfull \hbox (43.43994pt too wide) in paragraph at lines 72--72
+[]            \T1/fvm/m/n/12 lambda*(fft_e.*conj(fft_e)+fft_f.*conj(fft_f)));[] 
+ []
+
+<problem1.png, id=22, 1567.8575pt x 2351.78625pt>
+File: problem1.png Graphic file (type png)
+<use problem1.png>
+Package pdftex.def Info: problem1.png  used on input line 101.
+(pdftex.def)             Requested size: 391.96341pt x 587.94513pt.
+
+Overfull \hbox (1.96341pt too wide) in paragraph at lines 100--103
+[] 
+ []
+
+[3]
+Overfull \vbox (39.44513pt too high) has occurred while \output is active []
+
+ [4 <./problem1.png (PNG copy)>]
+Overfull \hbox (102.03476pt too wide) detected at line 109
 \OML/cmm/m/it/12 s[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N\OT1/cmr/m/n/12 ) = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2) + (0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 95 + 1) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 3) + (0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 95[] + 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 95 + 1) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 4) + [] + ([] 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 95[]) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (0)
  []
 
 
-Overfull \hbox (37.0859pt too wide) detected at line 56
+Overfull \hbox (37.0859pt too wide) detected at line 110
 \OML/cmm/m/it/12 s[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N\OT1/cmr/m/n/12 ) = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1) + (0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 95) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2) + (0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 95[]) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 3) + [] + (0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 95[]) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (0)
  []
 
-[2]
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 68.
- (c:/texlive/2022/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-) [3]
-<problem2a.png, id=27, 722.7pt x 867.24pt>
+[5]
+<problem2a.png, id=34, 722.7pt x 867.24pt>
 File: problem2a.png Graphic file (type png)
 <use problem2a.png>
-Package pdftex.def Info: problem2a.png  used on input line 114.
+Package pdftex.def Info: problem2a.png  used on input line 168.
 (pdftex.def)             Requested size: 289.07487pt x 346.88986pt.
- [4] [5 <./problem2a.png>]
-<problem2b.png, id=38, 462.528pt x 346.896pt>
+ [6] [7 <./problem2a.png>]
+<problem2b.png, id=46, 462.528pt x 346.896pt>
 File: problem2b.png Graphic file (type png)
 <use problem2b.png>
-Package pdftex.def Info: problem2b.png  used on input line 155.
+Package pdftex.def Info: problem2b.png  used on input line 209.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [6]
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-[7 <./problem2b.png>] [8] (./file.aux) ) 
+[9 <./problem2b.png>] [10] (./file.aux) ) 
 Here is how much of TeX's memory you used:
- 7618 strings out of 475075
- 121194 string characters out of 5783001
- 458671 words of memory out of 5000000
- 28904 multiletter control sequences out of 15000+600000
+ 7625 strings out of 475075
+ 121309 string characters out of 5783001
+ 459673 words of memory out of 5000000
+ 28910 multiletter control sequences out of 15000+600000
  485610 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,12n,82p,371b,274s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on file.pdf (8 pages, 234537 bytes).
+ 74i,12n,82p,371b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on file.pdf (10 pages, 2054517 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

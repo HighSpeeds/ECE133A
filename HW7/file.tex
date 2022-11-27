@@ -1,0 +1,85 @@
+\include{"../preamble.tex"}
+\title{ECE 133A HW 6}
+\begin{document}
+\maketitle
+\section*{Exercise A11.8}
+\subsection*{(c)}
+We have that 
+$$R_11=1$$
+And thus 
+$$R_{1,2:3}=[0,1]$$
+Thus now we need to compute the cholensky factorization of 
+$$\begin{bmatrix}
+    1 & 1\\
+    1 & a
+\end{bmatrix}-\begin{bmatrix}
+    0 & 1\\
+    1 & 0
+\end{bmatrix}=\begin{bmatrix}
+    1 & 0\\
+    0 & a
+\end{bmatrix}$$
+Thus we have that 
+$$R_{22}=1$$
+And thus we have that 
+$$R_{23}=0$$
+And thus we have that
+$$R_{33}=\sqrt{a}$$
+Thus we have that A is positive definite if and only if $a\geq0$, and if it 
+exists we have
+$$R=\begin{bmatrix}
+    1 & 0 & 1\\
+    0 & 1 & 0\\
+    0 & 0 & \sqrt{a}
+\end{bmatrix}$$
+\subsection*{(e)}
+We have that 
+$$R_11=\sqrt{a}$$
+thus we must have that $a\geq 0$, and thus we also have that 
+$$R_{1,2:3}=[\frac{1}{\sqrt{a}},0]$$
+Therefore we have that we want to find the cholesky factorization of
+of 
+$$\begin{bmatrix}
+    -a & 1\\
+    1 & a
+\end{bmatrix}-\begin{bmatrix}
+    \frac{1}{a} & 0\\
+    0 & 0
+\end{bmatrix}=\begin{bmatrix}
+    -a-\frac{1}{a} & 1\\
+    1 & a
+\end{bmatrix}$$
+This cannot be factorized since we already have 
+that $a\geq 0$ and thus we have that $-a-\frac{1}{a}\leq 0$. Thus we have
+that A is not positive definite.
+\subsection*{(h)}
+We have that 
+$$R_11=1$$
+And thus
+$$R_{1,2:3}=\frac{1}{1}A_{1,2:3}=[1,1]$$
+Thus we have that we want to find the cholesky factorization of
+$$\begin{bmatrix}
+    a & a\\
+    a & 2
+\end{bmatrix}-\begin{bmatrix}
+    1 & 1\\
+    1 & 1
+\end{bmatrix}=\begin{bmatrix}
+    a-1 & a-1\\
+    a-1 & 1
+\end{bmatrix}$$
+Thus we have that
+$$R_{22}=\sqrt{a-1}$$
+And thus we have that
+$$R_{23}=\frac{a-1}{\sqrt{a-1}}=\sqrt{a-1}$$
+Thus in order for these to exist we must have that $a\geq 1$, and thus we have
+that 
+$$R_{33}=\sqrt{1-a-1}=\sqrt{-a}$$
+This cannot exist, since we have already shown that $a\geq 1$, and thus we have
+that A is not positive definite and that the cholesky factorization does not
+exist.
+\section*{A11.14}
+
+\end{document}
+
+

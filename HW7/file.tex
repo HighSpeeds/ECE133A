@@ -79,6 +79,48 @@ This cannot exist, since we have already shown that $a\geq 1$, and thus we have
 that A is not positive definite and that the cholesky factorization does not
 exist.
 \section*{A11.14}
+\subsection*{(a)}
+We have that the cholensky factorization of $B$
+$$B=R_B^T R_B$$
+is of the form of  
+$$R_B=\begin{bmatrix}
+    R & v\\
+    0 & v_{n+1}
+\end{bmatrix}$$
+Now we need to solve for $v$ and $v_{n+1}$, we have that
+\begin{align*}
+R_B^t R_B&=\begin{bmatrix}
+    R^T & 0\\
+    v^T & v_{n+1}
+\end{bmatrix}\begin{bmatrix}
+    R & v\\
+    0 & v_{n+1}
+\end{bmatrix}\\
+&=\begin{bmatrix}
+    R^T R & R^Tv\\
+    v^TR & v^Tv+v_{n+1}^2
+\end{bmatrix}
+\end{align*}
+Thus we have that 
+$$v=R^{-T}u$$
+and 
+$$v_{n+1}^2=u^TA^{-1}u-1$$
+and thus we have that
+$$\boxed{
+    R_B=\begin{bmatrix}
+        R & R^{-T}u\\
+        0 & \sqrt{u^TA^{-1}u-1}
+    \end{bmatrix}
+}$$
+\subsection*{(b)}
+To solve for $v$, since $R$ is a upper triangular matrix, we can just use
+forward substitution to solve for $v$, which will cost us $n^2$ flops, 
+then to solve for $v_{n+1}$ we take the dot product of $v$ with itself,
+which will cost us $2n-1$ flops, and then subtract one and take the square 
+root, which will cost us $2$ flops, thus we have that the total cost is
+$\boxed{n^2+2n+1}$ flops.
+
+
 
 \end{document}
 

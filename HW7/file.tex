@@ -119,6 +119,93 @@ then to solve for $v_{n+1}$ we take the dot product of $v$ with itself,
 which will cost us $2n-1$ flops, and then subtract one and take the square 
 root, which will cost us $2$ flops, thus we have that the total cost is
 $\boxed{n^2+2n+1}$ flops.
+\section*{Exercise A14.8}
+
+\section*{Exercise A12.2}
+\subsection*{(a)}
+We want to find the two values of $t$, $t_1$ and $t_2$, such that
+$n(t_1)=n(t_2)=2$, we can write the newton's update as 
+\begin{multline*}
+    \begin{bmatrix}
+    t_1^{(k+1)}\\
+    t_2^{(k+1)}
+\end{bmatrix}=\begin{bmatrix}
+    t_1^{(k)}\\
+    t_2^{(k)}
+\end{bmatrix}\\-\begin{bmatrix}
+    -20t_1e^{-2t_1^{(k)}}-e^{-t_1^{(k)}}+10e^{-t_1^{(k)}} & 0\\
+    0 & -20t_2e^{-2t_2^{(k)}}-e^{-t_2^{(k)}}+10e^{-t_2^{(k)}}
+\end{bmatrix}^{-1}\begin{bmatrix}
+    10t_1e^{-2t_1^{(k)}}+e^{-t_1^{(k)}}-2\\
+    10t_2e^{-2t_2^{(k)}}+e^{-t_2^{(k)}}-2
+\end{bmatrix}
+\end{multline*}
+We can compute this newton's method in Julia with the following code:
+\begin{verbatim}
+    using LinearAlgebra
+
+function n(T)
+    n=zeros(length(T))
+    for i in 1:length(T)
+        t=T[i]
+        n[i]=10*t*exp(-2*t)+exp(-t)-2
+    end
+    return n
+end
+
+function dn(T)
+    dn=zeros(length(T))
+    for i in 1:length(T)
+        t=T[i]
+        dn[i]=10*exp(-2*t)*(1-2*t)-exp(-t)
+    end
+    return dn
+end
+
+t_1=0
+t_2=1
+
+let T=[t_1,t_2]
+    #newton's method 
+    thresh=0.00001
+    while norm(n(T))>thresh
+        T=T.-n(T)./dn(T)
+    end
+    println(T)
+    println(n(T).+[2,2])
+end
+\end{verbatim}
+With which we get
+$t_1=0.15661093823882483$, and $t_2=0.8383819928969031$
+\subsection*{(b)}
+for a value to reach the maximum, we would want its derivative to go to zero, 
+so then we have that the newton's update to find $t_{\text{max}}$
+$$
+    t_{\text{max}}^{(k+1)}=
+    t_{\text{max}}^{(k)}-\frac{10e^{-2t_{\text{max}}^{(k)}}(1-2t_{\text{max}}^{(k)})+e^{-t_{\text{max}}^{(k)}}}
+    {e^{-2t_{\text{max}}^{(k)}}(e^{t_{\text{max}}^{(k)}}+40t_{\text{max}}^{(k)}-40)}
+$$
+With the following code in addition to the code we wrote for part a we get that 
+$t_{\text{max}}=\boxed{0.4236255212307657}$
+\begin{verbatim}
+    function d2n(T)
+    d2n=zeros(length(T))
+    for i in 1:length(T)
+        t=T[i]
+        d2n[i]=exp(-2*t)*(exp(t)+40*t-40)
+    end
+    return d2n
+end
+
+let t_max=[0]
+    thresh=0.00001
+    while norm(dn(t_max))>thresh
+        t_max=t_max.-dn(t_max)./d2n(t_max)
+    end
+    println("t_max=",t_max[1])
+    println("n(t_max)=",n(t_max)[1]+2)
+end
+\end{verbatim}
 
 
 

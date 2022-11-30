@@ -29,27 +29,21 @@ end
 
 function main()
 
-    params=[1,1]
+    params=[0,0]
 
-    while true
+    for i=1:10
         #using newton's method to optimize g 
         alpha=params[1]
         beta=params[2]
         g_= g(alpha,beta,t,y)
         J= Jacobian_g(alpha,beta,t,y)
-        println(size(J))
-        println(size((g_\J)))
         # println(sum(J.*(g_\J)))
-        params=params.-reshape((g_\J),2)
+        params=params.-inv(J'*J)*(J'*g_)
         delta_g=2*(transpose(J)*g_)
-        println("norm g=",norm(g_))
-        println("delta_g=",delta_g)
 
-        if norm(delta_g)<=1e-5
+        if norm(delta_g)<=1e-6
             break
         end
-        println(params)
-        println("-------------------------")
     end
     println("alpha=",params[1])
     println("beta=",params[2])

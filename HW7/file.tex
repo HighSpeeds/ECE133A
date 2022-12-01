@@ -13,24 +13,24 @@ $$\begin{bmatrix}
     1 & 1\\
     1 & a
 \end{bmatrix}-\begin{bmatrix}
-    0 & 1\\
-    1 & 0
+    0 & 0\\
+    0 & 1
 \end{bmatrix}=\begin{bmatrix}
-    1 & 0\\
-    0 & a
+    1 & 1\\
+    1 & a-1
 \end{bmatrix}$$
 Thus we have that 
 $$R_{22}=1$$
 And thus we have that 
-$$R_{23}=0$$
+$$R_{23}=1$$
 And thus we have that
-$$R_{33}=\sqrt{a}$$
-Thus we have that A is positive definite if and only if $a\geq0$, and if it 
+$$R_{33}=\sqrt{a-2}$$
+Thus we have that A is positive definite if and only if $a\geq2$, and if it 
 exists we have
 $$R=\begin{bmatrix}
     1 & 0 & 1\\
-    0 & 1 & 0\\
-    0 & 0 & \sqrt{a}
+    0 & 1 & 1\\
+    0 & 0 & \sqrt{a-2}
 \end{bmatrix}$$
 \subsection*{(e)}
 We have that 
@@ -74,10 +74,15 @@ And thus we have that
 $$R_{23}=\frac{a-1}{\sqrt{a-1}}=\sqrt{a-1}$$
 Thus in order for these to exist we must have that $a\geq 1$, and thus we have
 that 
-$$R_{33}=\sqrt{1-a-1}=\sqrt{-a}$$
-This cannot exist, since we have already shown that $a\geq 1$, and thus we have
-that A is not positive definite and that the cholesky factorization does not
-exist.
+$$R_{33}=\sqrt{1-a+1}=\sqrt{2-a}$$
+This exists if $a\leq 2$ Therefore we have that 
+A is positive definite if and only if $1\leq a\leq 2$, and if it exists we have
+that 
+$$R=\begin{bmatrix}
+    1 & 1 & 1\\
+    0 & \sqrt{a-1} & \sqrt{a-1}\\
+    0 & 0 & \sqrt{2-a}
+\end{bmatrix}$$
 \section*{A11.14}
 \subsection*{(a)}
 We have that the cholensky factorization of $B$
@@ -104,12 +109,12 @@ R_B^t R_B&=\begin{bmatrix}
 Thus we have that 
 $$v=R^{-T}u$$
 and 
-$$v_{n+1}^2=u^TA^{-1}u-1$$
+$$v_{n+1}^2=1-u^TA^{-1}u$$
 and thus we have that
 $$\boxed{
     R_B=\begin{bmatrix}
         R & R^{-T}u\\
-        0 & \sqrt{u^TA^{-1}u-1}
+        0 & \sqrt{1-u^TA^{-1}u}
     \end{bmatrix}
 }$$
 \subsection*{(b)}
